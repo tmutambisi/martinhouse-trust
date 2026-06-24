@@ -19,6 +19,13 @@ import sports4 from "@/assets/primary-school/sports/sports4.jpg";
 import sports5 from "@/assets/primary-school/sports/sports5.jpg";
 import labImg from "@/assets/primary-school/sports/lab.jpg";
 
+import prepRunning from "@/assets/prep-running.jpg";
+import prepSoftskills from "@/assets/prep-softskills.jpg";
+import prepPastoralCare from "@/assets/prep-pastoral care.jpg";
+import prepIngarden from "@/assets/prep-ingarden.jpg";
+import prepBoarding from "@/assets/prep-boarding.jpg";
+import prepCulture from "@/assets/prep-culture.jpg";
+
 const sections: Record<string, {
   title: string;
   subtitle: string;
@@ -28,7 +35,7 @@ const sections: Record<string, {
   about: {
     title: "About Primary School",
     subtitle: "Nurturing curious, confident, and compassionate young learners.",
-    heroImage: navImg2,
+    heroImage: prepIngarden,
     content: (
       <div className="prose-premium max-w-none">
         <h2>Our Primary School</h2>
@@ -46,12 +53,12 @@ const sections: Record<string, {
           challenged, they become lifelong learners.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
-          {[navImg3, navImg4].map((src, i) => (
+          {[prepSoftskills, prepPastoralCare].map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Primary school life ${i + 1}`}
-              className="w-full h-56 object-cover rounded-2xl shadow-md"
+              className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300"
             />
           ))}
         </div>
@@ -78,7 +85,7 @@ const sections: Record<string, {
   academics: {
     title: "Primary Academics",
     subtitle: "A challenging and well-rounded curriculum for every learner.",
-    heroImage: navImg4,
+    heroImage: prepSoftskills,
     content: (
       <div className="prose-premium max-w-none">
         <h2>Curriculum Overview</h2>
@@ -126,7 +133,7 @@ const sections: Record<string, {
   culture: {
     title: "Primary Culture",
     subtitle: "Celebrating heritage, creativity, and community.",
-    heroImage: navImg5,
+    heroImage: prepCulture,
     content: (
       <div className="prose-premium max-w-none">
         <h2>A Rich Cultural Life</h2>
@@ -136,12 +143,12 @@ const sections: Record<string, {
           child to discover and celebrate their identity.
         </p>
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          {[random1, random2].map((src, i) => (
+          {[prepCulture, prepBoarding].map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Cultural activities ${i + 1}`}
-              className="w-full h-56 object-cover rounded-2xl shadow-md"
+              className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300"
             />
           ))}
         </div>
@@ -176,7 +183,7 @@ const sections: Record<string, {
   sport: {
     title: "Primary Sport",
     subtitle: "Building teamwork, discipline, and a love of healthy living.",
-    heroImage: sport1,
+    heroImage: prepRunning,
     content: (
       <div className="prose-premium max-w-none">
         <h2>Sport at Martin House Primary</h2>
@@ -195,8 +202,8 @@ const sections: Record<string, {
           ))}
         </div>
         <div className="not-prose grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
-          {[sport1, sport2, sport3].map((src, i) => (
-            <img key={i} src={src} alt={`Sport ${i + 1}`} className="w-full h-44 object-cover rounded-2xl shadow-sm" />
+          {[prepRunning, sport2, sport3].map((src, i) => (
+            <img key={i} src={src} alt={`Sport ${i + 1}`} className="w-full h-44 object-cover rounded-2xl shadow-sm hover:scale-[1.02] transition-transform duration-300" />
           ))}
         </div>
         <h2>Inter-House & Inter-School Competition</h2>

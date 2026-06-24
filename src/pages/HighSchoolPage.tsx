@@ -12,9 +12,15 @@ import school1 from "@/assets/secondary-school/school/random1.jpg";
 import school2 from "@/assets/secondary-school/school/bio1.jpg";
 import cricket1 from "@/assets/secondary-school/sport/cricket1.jpg";
 import cricket2 from "@/assets/secondary-school/sport/cricket2.jpg";
-import girls from "@/assets/secondary-school/sport/girls.jpg";
 import music from "@/assets/secondary-school/sport/music.jpg";
 import speechda1 from "@/assets/secondary-school/sport/speechda1.jpg";
+
+import highxl from "@/assets/highxl.jpg";
+import highSports from "@/assets/high-sports.jpg";
+import highxlArts from "@/assets/highxl-arts.jpg";
+import highxlGirls from "@/assets/highxl-girls.jpg";
+import highxlScience from "@/assets/highxl-science.jpg";
+import highxlSpeechNPrize from "@/assets/highxl-speechnprize.jpg";
 
 const sections: Record<string, {
   title: string;
@@ -25,7 +31,7 @@ const sections: Record<string, {
   about: {
     title: "About High School",
     subtitle: "Shaping scholars, leaders, and responsible citizens for tomorrow.",
-    heroImage: nav1,
+    heroImage: highxl,
     content: (
       <div className="prose-premium max-w-none">
         <h2>Our High School</h2>
@@ -42,12 +48,12 @@ const sections: Record<string, {
           sports fields, and boarding houses.
         </p>
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          {[nav2, nav3].map((src, i) => (
+          {[highxlArts, highxlSpeechNPrize].map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`High school life ${i + 1}`}
-              className="w-full h-56 object-cover rounded-2xl shadow-md"
+              className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300"
             />
           ))}
         </div>
@@ -75,7 +81,7 @@ const sections: Record<string, {
   academics: {
     title: "High School Academics",
     subtitle: "Cambridge and national qualifications for university-bound scholars.",
-    heroImage: nav2,
+    heroImage: highxlScience,
     content: (
       <div className="prose-premium max-w-none">
         <h2>Academic Programmes</h2>
@@ -111,7 +117,7 @@ const sections: Record<string, {
           Zimbabwe, South Africa, the United Kingdom, and beyond.
         </p>
         <div className="not-prose my-8">
-          <img src={school1} alt="High school academics" className="w-full h-64 object-cover rounded-2xl shadow-md" />
+          <img src={highxlSpeechNPrize} alt="High school academics" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
         </div>
         <h2>Academic Excellence</h2>
         <p>
@@ -126,7 +132,7 @@ const sections: Record<string, {
   culture: {
     title: "High School Culture",
     subtitle: "Excellence in arts, music, drama, and community engagement.",
-    heroImage: nav3,
+    heroImage: highxlArts,
     content: (
       <div className="prose-premium max-w-none">
         <h2>A Vibrant School Culture</h2>
@@ -136,12 +142,12 @@ const sections: Record<string, {
           whether through music, drama, public speaking, or visual arts.
         </p>
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          {[music, speechda1].map((src, i) => (
+          {[highxlArts, highxlSpeechNPrize].map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Cultural activity ${i + 1}`}
-              className="w-full h-56 object-cover rounded-2xl shadow-md"
+              className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300"
             />
           ))}
         </div>
@@ -173,7 +179,7 @@ const sections: Record<string, {
   sport: {
     title: "High School Sport",
     subtitle: "Competitive sport that builds character, teamwork, and discipline.",
-    heroImage: cricket1,
+    heroImage: highSports,
     content: (
       <div className="prose-premium max-w-none">
         <h2>Sport at Martin House College</h2>
@@ -192,8 +198,8 @@ const sections: Record<string, {
           ))}
         </div>
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-          {[cricket1, cricket2].map((src, i) => (
-            <img key={i} src={src} alt={`Cricket ${i + 1}`} className="w-full h-48 object-cover rounded-2xl shadow-sm" />
+          {[highSports, cricket2].map((src, i) => (
+            <img key={i} src={src} alt={`Cricket ${i + 1}`} className="w-full h-48 object-cover rounded-2xl shadow-sm hover:scale-[1.02] transition-transform duration-300" />
           ))}
         </div>
         <h2>Girls' Sport</h2>
@@ -204,7 +210,7 @@ const sections: Record<string, {
           competitive exposure for all.
         </p>
         <div className="not-prose my-6">
-          <img src={girls} alt="Girls sport" className="w-full h-56 object-cover rounded-2xl shadow-md" />
+          <img src={highxlGirls} alt="Girls sport" className="w-full h-56 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
         </div>
         <h2>Facilities</h2>
         <p>
@@ -214,7 +220,7 @@ const sections: Record<string, {
           during evenings and weekends for boarders.
         </p>
         <div className="not-prose mt-6">
-          <img src={school2} alt="Campus facilities" className="w-full h-56 object-cover rounded-2xl shadow-md" />
+          <img src={highxl} alt="Campus facilities" className="w-full h-56 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
         </div>
       </div>
     ),

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import FAQSection from "@/components/FAQSection";
 import OfficeFinder from "@/components/OfficeFinder";
-import heroImage from "@/assets/primary-school/random/random2.jpg";
+import heroImage from "@/assets/prep-ingarden.jpg";
 
 const FAQPage = () => {
   return (

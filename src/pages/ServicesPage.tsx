@@ -32,6 +32,11 @@ import {
 
 // Assets
 import servicesHeroImg from "@/assets/secondary-school/school/random1.jpg";
+import art1Img from "@/assets/art1.jpg";
+import pastoralCareImg from "@/assets/pastoral-care.jpg";
+import prepBoardingImg from "@/assets/prep-boarding.jpg";
+import prepCultureImg from "@/assets/prep-culture.jpg";
+import highxlScience from "@/assets/highxl-science.jpg";
 
 export const ServicesPage = () => {
     const [activeTab, setActiveTab] = useState<"college" | "prep">("college");
@@ -222,15 +227,10 @@ export const ServicesPage = () => {
                                 <div className="container mx-auto px-6 max-w-7xl">
                                     <div className="grid lg:grid-cols-12 gap-16 items-center">
                                         
-                                        {/* Left Side: Photo/Illustration Placeholder */}
-                                        <div className="lg:col-span-5">
-                                            <div className="aspect-[4/5] rounded-[3rem] bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 p-12 border-2 border-dashed border-primary/20 flex flex-col justify-center items-center text-center relative overflow-hidden shadow-inner">
-                                                <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-full blur-2xl" />
-                                                <div className="w-20 h-20 rounded-3xl bg-white flex items-center justify-center shadow-md mb-6">
-                                                    <Heart className="w-10 h-10 text-primary" />
-                                                </div>
-                                                <h4 className="text-lg font-heading font-black text-primary uppercase tracking-tight mb-2">Pastoral Care PlaceHolder</h4>
-                                                <p className="text-xs text-slate-400 max-w-xs font-medium">Safe, inclusive, and values-driven boarding & campus environment.</p>
+                                        {/* Left Side: Photo/Illustration */}
+                                        <div className="lg:col-span-5 relative">
+                                            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-100">
+                                                <img src={pastoralCareImg} alt="Pastoral Care - Martin House" className="w-full h-full object-cover" />
                                             </div>
                                         </div>
 
@@ -309,53 +309,60 @@ export const ServicesPage = () => {
                                             </p>
                                         </div>
 
-                                        <div className="lg:col-span-4 aspect-[4/3] rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center justify-center p-6 text-center text-slate-400">
-                                            <Palette className="w-10 h-10 mb-2 text-slate-300" />
-                                            <span className="text-xs font-bold uppercase tracking-wider">Art Showcase Placeholder</span>
+                                        <div className="lg:col-span-4 aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 shadow-lg relative bg-slate-50">
+                                            <img src={art1Img} alt="Fine Arts - Martin House Showcase" className="w-full h-full object-cover" />
                                         </div>
                                     </div>
 
                                     {/* Featured JETS Science Club */}
-                                    <div className="bg-[#000026] text-white rounded-[3rem] p-8 md:p-16 shadow-2xl mb-16 relative overflow-hidden">
-                                        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none" />
+                                    <div className="bg-white text-slate-800 rounded-[3rem] p-8 md:p-16 shadow-xl border border-slate-200/60 mb-16 relative overflow-hidden">
+                                        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
                                         <div className="relative z-10 grid lg:grid-cols-12 gap-12 items-center">
                                             <div className="lg:col-span-7 space-y-8">
                                                 <div className="space-y-2">
                                                     <span className="text-secondary text-[10px] font-black tracking-widest uppercase">Junior Engineers, Technicians and Scientists</span>
-                                                    <h3 className="text-3xl md:text-5xl font-heading font-black tracking-tight uppercase">
+                                                    <h3 className="text-3xl md:text-5xl font-heading font-black tracking-tight uppercase text-primary">
                                                         JETS Science Club
                                                     </h3>
                                                 </div>
-                                                <blockquote className="border-l-4 border-secondary pl-6 italic text-lg text-white/90">
+                                                <blockquote className="border-l-4 border-secondary pl-6 italic text-lg text-slate-700">
                                                     "What happens when curiosity meets experimentation? Amazing discoveries! Our members don't just learn science from textbooks—they experience it firsthand."
                                                 </blockquote>
-                                                <p className="text-white/70 text-sm leading-relaxed">
+                                                <p className="text-slate-600 text-sm leading-relaxed font-medium">
                                                     From exciting chemical reactions to engineering challenges and scientific investigations, every meeting is an opportunity to explore, learn, and innovate. Today's experiment inspires tomorrow's scientist.
                                                 </p>
-                                                <div className="text-secondary text-sm font-black uppercase tracking-widest">
+                                                <div className="pt-2">
+                                                    <h4 className="font-heading font-black uppercase tracking-tight text-primary mb-4 flex items-center gap-3">
+                                                        <Flame className="w-5 h-5 text-secondary" />
+                                                        Why Join JETS?
+                                                    </h4>
+                                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-bold text-slate-600">
+                                                        {[
+                                                            "Conduct exciting hands-on laboratory experiments",
+                                                            "Develop practical scientific and inquiry skills",
+                                                            "Build creativity and problem-solving abilities",
+                                                            "Participate in STEM competitions and school projects",
+                                                            "Prepare for careers in science, technology, engineering, and medicine"
+                                                        ].map((point, idx) => (
+                                                            <li key={idx} className="flex items-start gap-3">
+                                                                <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 shrink-0" />
+                                                                <span>{point}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                                <div className="text-primary text-sm font-black uppercase tracking-widest pt-2">
                                                     Think. Experiment. Discover. Innovate.
                                                 </div>
                                             </div>
 
-                                            <div className="lg:col-span-5 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-md">
-                                                <h4 className="font-heading font-black uppercase tracking-tight text-white mb-6 flex items-center gap-3">
-                                                    <Flame className="w-5 h-5 text-secondary" />
-                                                    Why Join JETS?
-                                                </h4>
-                                                <ul className="space-y-4 text-xs font-bold text-white/80">
-                                                    {[
-                                                        "Conduct exciting hands-on laboratory experiments",
-                                                        "Develop practical scientific and inquiry skills",
-                                                        "Build creativity and problem-solving abilities",
-                                                        "Participate in STEM competitions and school projects",
-                                                        "Prepare for careers in science, technology, engineering, and medicine"
-                                                    ].map((point, idx) => (
-                                                        <li key={idx} className="flex items-start gap-3">
-                                                            <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 shrink-0" />
-                                                            <span>{point}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                            <div className="lg:col-span-5 relative">
+                                                <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-slate-100 shadow-2xl relative group bg-slate-50">
+                                                    <img src={highxlScience} alt="JETS Science Lab at Martin House" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                                        <p className="text-white text-xs font-bold uppercase tracking-widest">Active Science & Discovery Lab</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -551,15 +558,10 @@ export const ServicesPage = () => {
                                 <div className="container mx-auto px-6 max-w-7xl">
                                     <div className="grid lg:grid-cols-12 gap-16 items-center">
                                         
-                                        {/* Left Side: Photo/Illustration Placeholder */}
-                                        <div className="lg:col-span-5">
-                                            <div className="aspect-[4/5] rounded-[3rem] bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 p-12 border-2 border-dashed border-primary/20 flex flex-col justify-center items-center text-center relative overflow-hidden shadow-inner">
-                                                <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-full blur-2xl" />
-                                                <div className="w-20 h-20 rounded-3xl bg-white flex items-center justify-center shadow-md mb-6">
-                                                    <Home className="w-10 h-10 text-primary" />
-                                                </div>
-                                                <h4 className="text-lg font-heading font-black text-primary uppercase tracking-tight mb-2">Prep Hostel Placeholder</h4>
-                                                <p className="text-xs text-slate-400 max-w-xs font-medium">Nutritious meals, onsite clinic, and daily services with dedicated hostel parents.</p>
+                                        {/* Left Side: Photo/Illustration */}
+                                        <div className="lg:col-span-5 relative">
+                                            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-100">
+                                                <img src={prepBoardingImg} alt="Prep Boarding Hostel - Martin House" className="w-full h-full object-cover" />
                                             </div>
                                         </div>
 
@@ -666,9 +668,8 @@ export const ServicesPage = () => {
                                             </div>
                                         </div>
 
-                                        <div className="lg:col-span-4 aspect-[4/3] rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center justify-center p-6 text-center text-slate-400">
-                                            <Music className="w-10 h-10 mb-2 text-slate-300" />
-                                            <span className="text-xs font-bold uppercase tracking-wider">Music Pathway Placeholder</span>
+                                        <div className="lg:col-span-4 aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 shadow-lg relative bg-slate-50">
+                                            <img src={prepCultureImg} alt="Prep Music & Culture - Martin House" className="w-full h-full object-cover" />
                                         </div>
                                     </div>
 

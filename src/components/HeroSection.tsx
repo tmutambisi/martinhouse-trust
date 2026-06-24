@@ -14,6 +14,7 @@ import random1Img from "@/assets/primary-school/random/random1.jpg";
 import sNav1 from "@/assets/secondary-school/navbar/nav1.jpg";
 import sNav2 from "@/assets/secondary-school/navbar/nav2.jpg";
 import sNav3 from "@/assets/secondary-school/navbar/nav3.jpg";
+import navbarImg from "@/assets/navbar.jpg";
 
 const slides = [
   {
@@ -21,8 +22,9 @@ const slides = [
     title: "Welcome to Martin House",
     category: "Martin House Trust School",
     description: "A day and boarding school tucked safely on Kalundu Farm, Chisamba — surrounded by 80 hectares of indigenous vegetation, sports grounds, and well-equipped classrooms.",
-    bgColor: "#ffffff",
-    dark: false,
+    bgColor: "#0c2865",
+    image: navbarImg,
+    dark: true,
   },
   {
     id: 2,

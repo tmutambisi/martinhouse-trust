@@ -1,5 +1,7 @@
 import { GraduationCap, Trophy, CheckCircle2 } from 'lucide-react';
 import { motion, useReducedMotion } from "framer-motion";
+import prepInGarden from "@/assets/prep-ingarden.jpg";
+import highxl from "@/assets/highxl.jpg";
 
 const AboutSection = () => {
   const prefersReducedMotion = useReducedMotion();
@@ -82,11 +84,8 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-8 relative"
           >
             <div className="space-y-8">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-[8px] border-white group relative bg-primary/10 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <GraduationCap className="w-16 h-16 text-primary/30 mx-auto mb-4" />
-                  <p className="text-primary/40 text-xs font-bold uppercase tracking-widest">School Photo</p>
-                </div>
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-[8px] border-white group relative bg-primary/10">
+                <img src={prepInGarden} alt="Martin House Primary garden campus" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
 
               <div className="aspect-square bg-primary rounded-2xl p-10 flex flex-col justify-between text-white shadow-2xl transition-all duration-300 group hover:bg-secondary">
@@ -107,11 +106,8 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-[8px] border-white group relative bg-secondary/10 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <GraduationCap className="w-16 h-16 text-secondary/30 mx-auto mb-4" />
-                  <p className="text-secondary/40 text-xs font-bold uppercase tracking-widest">Campus Photo</p>
-                </div>
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-[8px] border-white group relative bg-secondary/10">
+                <img src={highxl} alt="Martin House College campus grounds" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
             </div>
           </motion.div>

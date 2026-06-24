@@ -10,15 +10,19 @@ interface PageHeroProps {
 const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
   return (
     <section className="relative w-full bg-slate-50 pt-[140px] pb-8 px-4 md:px-8 font-body">
-      <div className="relative w-full h-[55vh] min-h-[400px] max-w-[1600px] mx-auto rounded-[60px] overflow-hidden bg-slate-200 flex items-center shadow-2xl">
-        {/* Background Gradient */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-[#0c2865] via-[#103078] to-[#081e4b] transition-transform duration-1000 transform"
-        >
-          {/* Professional Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-        </div>
+      <div className="relative w-full h-[55vh] min-h-[400px] max-w-[1600px] mx-auto rounded-[60px] overflow-hidden flex items-center shadow-2xl">
+
+        {/* Background Photo */}
+        <img
+          src={backgroundImage}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+          aria-hidden="true"
+        />
+
+        {/* Dark overlay — deep gradient from left for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c2865]/90 via-[#0c2865]/70 to-[#0c2865]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
 
         {/* Content Container */}
         <div className="container mx-auto px-12 md:px-24 xl:px-36 relative z-10 w-full">
@@ -28,7 +32,7 @@ const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-start w-full"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-black text-white leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-black text-white leading-tight tracking-tight drop-shadow-lg">
               {title}
             </h1>
 
@@ -54,3 +58,4 @@ const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
 };
 
 export default PageHero;
+

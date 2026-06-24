@@ -95,7 +95,7 @@ export const Navbar = () => {
 
   // Smooth transitions on scroll using useTransform
   const headerY = useTransform(scrollY, [0, 50], [0, -56]); // hides top bar
-  const navPadding = useTransform(scrollY, [0, 100], ["1rem", "0.5rem"]);
+  const navPadding = useTransform(scrollY, [0, 100], ["0.4rem", "0.2rem"]);
   const navBg = useTransform(
     scrollY, 
     [0, 100], 
@@ -310,16 +310,16 @@ export const Navbar = () => {
           </div>
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative z-50">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative z-50 overflow-visible">
           <motion.nav 
             style={{ 
               paddingTop: navPadding, 
               paddingBottom: navPadding,
               backgroundColor: navBg,
               boxShadow: navShadow,
-              marginTop: "1rem"
+              marginTop: "0.5rem"
             }}
-            className="rounded-full px-4 lg:px-8 flex items-center justify-between h-auto min-h-[72px] backdrop-blur-md border border-white/20"
+            className="rounded-full px-3 lg:px-6 flex items-center justify-between h-auto min-h-[52px] backdrop-blur-md border border-white/20 overflow-visible"
           >
             {/* Mobile Toggle */}
             <button
@@ -331,7 +331,7 @@ export const Navbar = () => {
 
             {/* Mobile Logo */}
             <Link to="/" className="lg:hidden absolute left-1/2 -translate-x-1/2" onClick={handleHomeClick}>
-              <span className="text-primary font-black text-lg tracking-tight">MARTIN HOUSE</span>
+              <img src={schoolLogo} alt="Martin House Logo" className="h-10 w-auto object-contain" />
             </Link>
 
             {/* Nav Container - Split into Left / Logo / Right */}
@@ -347,7 +347,7 @@ export const Navbar = () => {
 
               {/* Centered Logo */}
               <motion.div
-                className="shrink-0"
+                className="shrink-0 overflow-visible"
                 initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, x: -20 }}
                 animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -357,7 +357,7 @@ export const Navbar = () => {
                   className="flex items-center justify-center px-6 group shrink-0"
                   onClick={handleHomeClick}
                 >
-                  <img src={schoolLogo} alt="Martin House Logo" className="h-14 w-auto object-contain" />
+                  <img src={schoolLogo} alt="Martin House Logo" className="h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105 drop-shadow-xl" style={{ marginTop: '-0.75rem', marginBottom: '-0.75rem' }} />
                 </Link>
               </motion.div>
 
