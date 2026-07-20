@@ -96,7 +96,7 @@ const leaders: Leader[] = [
     name: "Ernest Magama",
     title: "Head of Academics & STEM Curriculum",
     image: ErnestMagama,
-    shortBio: "Senior educator with 30 years of experience. Oversees the academic syllabus, examination preparation (ZIMSEC/Cambridge), and teacher performance.",
+    shortBio: "Senior educator with 30 years of experience. Oversees the academic syllabus, Cambridge International examination preparation, and teacher performance.",
     fullBio: "Ernest Magama is the Head of Academics. He coordinates curriculum design, schedules international exams, and ensures the highest pedagogy standards across science, technology, engineering, and mathematics.",
     role: "management"
   },

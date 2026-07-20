@@ -58,7 +58,7 @@ const QuotePage = () => {
                 {[
                   { icon: GraduationCap, title: "Admissions Guidance", desc: "Get detailed support through our simple, structured registration and enrollment procedure.", color: "bg-primary" },
                   { icon: Building, title: "Campus Tours", desc: "Schedule a guided tour of our modern laboratories, sports facilities, and boarding houses.", color: "bg-secondary" },
-                  { icon: Users, title: "Academic consultation", desc: "Discuss Cambridge or ZIMSEC pathways and subject selections directly with our academic deans.", color: "bg-slate-900" }
+                  { icon: Users, title: "Academic consultation", desc: "Discuss Cambridge International pathways and subject selections directly with our academic deans.", color: "bg-slate-900" }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 p-6 bg-slate-50 rounded-xl border border-slate-100 group hover:bg-white hover:shadow-xl transition-all duration-500">
                     <div className={`w-12 h-12 ${item.color} rounded-lg flex items-center justify-center text-white shadow-lg shrink-0 group-hover:scale-105 transition-transform duration-500`}>

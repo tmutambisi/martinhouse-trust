@@ -36,10 +36,9 @@ const sections: Record<string, {
       <div className="prose-premium max-w-none">
         <h2>Our High School</h2>
         <p>
-          Martin House College (High School) caters for Forms 1 to 6, offering both
-          the Cambridge IGCSE and Advanced Level programmes alongside the Zimbabwean
-          national curriculum. Students benefit from small class sizes, expert subject
-          teachers, and a community-focused boarding environment.
+          Martin House College caters for Forms 1 to 6, offering the Cambridge International
+          programmes — Cambridge Checkpoint, IGCSE, and AS &amp; A Level. Students benefit from
+          small class sizes, expert subject specialists, and a community-focused boarding environment.
         </p>
         <p>
           The College campus shares the tranquil 80-hectare Kalundu Farm setting with
@@ -79,25 +78,40 @@ const sections: Record<string, {
     ),
   },
   academics: {
-    title: "High School Academics",
-    subtitle: "Cambridge and national qualifications for university-bound scholars.",
+    title: "College Academics",
+    subtitle: "Cambridge International qualifications for university-bound scholars.",
     heroImage: highxlScience,
     content: (
       <div className="prose-premium max-w-none">
-        <h2>Academic Programmes</h2>
+        <h2>Overview</h2>
         <p>
-          The College offers two academic pathways: the Zimbabwean national curriculum
-          leading to ZIMSEC O-Level and A-Level qualifications, and the Cambridge
-          International pathway leading to IGCSE and Cambridge International AS & A
-          Level qualifications.
+          At Martin House, our Academic section lies at the core of everything we do. We deliver a dynamic, inclusive curriculum that challenges, inspires, and develops every learner. From early years through to senior secondary, we blend strong academic foundations with vital 21st-century skills—critical thinking, digital literacy, and collaboration—preparing students to thrive in a rapidly changing world.
         </p>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+        <h2>Purpose</h2>
+        <p>
+          We do more than teach—we ignite a lifelong love of learning. We believe true success goes beyond grades, shaping confident, resilient and curious individuals. Our approach:
+        </p>
+        <div className="not-prose grid grid-cols-1 gap-4 my-6">
           {[
-            { title: "ZIMSEC O & A Level", items: ["English Language & Literature", "Mathematics & Additional Maths", "Sciences (Phy, Chem, Bio)", "Humanities & Social Studies", "Commercial Subjects", "Shona & Ndebele"] },
-            { title: "Cambridge IGCSE / A Level", items: ["English as a First Language", "Extended Mathematics", "Coordinated Sciences / Triple Science", "Business Studies & Economics", "History & Geography", "French & Spanish"] },
+            "Equips students for internationally recognised qualifications and higher education",
+            "Encourages independence and ownership of learning",
+            "Ensures every student is supported to achieve their very best",
+          ].map((item) => (
+            <div key={item} className="flex items-start gap-3 bg-slate-50 rounded-xl px-5 py-4 border border-slate-100">
+              <ChevronRight className="w-4 h-4 text-[#0c2865] flex-shrink-0 mt-0.5" />
+              <span className="text-sm font-medium text-slate-700">{item}</span>
+            </div>
+          ))}
+        </div>
+        <h2>Cambridge Curriculum</h2>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
+          {[
+            { title: "Cambridge Checkpoint", items: ["English Language", "Mathematics", "Science", "Global Perspectives"] },
+            { title: "Cambridge IGCSE", items: ["English as a First Language", "Extended Mathematics", "Triple / Co-ordinated Sciences", "Business Studies & Economics", "History & Geography", "French & Afrikaans"] },
+            { title: "Cambridge AS & A Level", items: ["Mathematics & Further Maths", "Physics, Chemistry, Biology", "Business & Economics", "History & English Literature", "Art & Design"] },
           ].map(({ title, items }) => (
             <div key={title} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-              <h3 className="font-bold text-black text-base mb-4 pb-2 border-b border-slate-200">{title}</h3>
+              <h3 className="font-bold text-[#0c2865] text-sm mb-4 pb-2 border-b border-slate-200 uppercase tracking-wide">{title}</h3>
               <ul className="space-y-2">
                 {items.map(item => (
                   <li key={item} className="flex items-center gap-2 text-sm text-slate-700">
@@ -109,22 +123,27 @@ const sections: Record<string, {
             </div>
           ))}
         </div>
-        <h2>University Preparation</h2>
-        <p>
-          Our University and Careers Guidance team begins working with students from
-          Form 4, providing subject advice, university application support, and
-          interview preparation. Our alumni have gone on to study at universities in
-          Zimbabwe, South Africa, the United Kingdom, and beyond.
-        </p>
+        <h2>Key Information</h2>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          {[
+            { label: "Curriculum", value: "Cambridge (Checkpoint, IGCSE, AS & A Level)" },
+            { label: "Faculty", value: "Expert, passionate subject specialists committed to excellence" },
+            { label: "Support", value: "Personalised learning through close collaboration with the Learning Support department" },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+              <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1">{label}</p>
+              <p className="text-sm font-bold text-[#0c2865]">{value}</p>
+            </div>
+          ))}
+        </div>
         <div className="not-prose my-8">
-          <img src={highxlSpeechNPrize} alt="High school academics" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
+          <img src={highxlSpeechNPrize} alt="College academics" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
         </div>
         <h2>Academic Excellence</h2>
         <p>
-          Martin House College consistently achieves outstanding public examination
+          Martin House College consistently achieves outstanding Cambridge examination
           results. Top performers are recognised at our annual Prize Day, and academic
-          scholarships are available for high-achieving pupils entering Form 1 and
-          Form 4.
+          scholarships are available for high-achieving pupils entering Form 1 and Form 4.
         </p>
       </div>
     ),

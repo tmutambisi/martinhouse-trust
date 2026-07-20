@@ -3,7 +3,7 @@ import { Award, Star, Trophy, ShieldCheck } from "lucide-react";
 
 const awards = [
     { name: "Cambridge Excellence", title: "Cambridge Assessment International Education Center", icon: Award },
-    { name: "Academic Merit", title: "Top 10 National Academic Ranking (ZIMSEC)", icon: Trophy },
+    { name: "Academic Merit", title: "Cambridge International Top Academic Achievers", icon: Trophy },
     { name: "Sports Champion", title: "National Secondary Schools Sports Championship Winner", icon: Star },
     { name: "Eco Campus Award", title: "Harare Council Environmental Care Recognition", icon: ShieldCheck },
     { name: "Innovation in Ed", title: "Ministry of Education STEM Innovation Award", icon: Award },

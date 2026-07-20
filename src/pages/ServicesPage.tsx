@@ -422,6 +422,148 @@ export const ServicesPage = () => {
 
                                 </div>
                             </section>
+
+                            {/* COLLEGE SPORTS */}
+                            <section className="py-20 lg:py-32 bg-white border-t border-slate-100">
+                                <div className="container mx-auto px-6 max-w-7xl">
+
+                                    {/* Section Heading */}
+                                    <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                                        <div>
+                                            <span className="inline-block px-4 py-1.5 bg-secondary/15 text-primary rounded-full text-[10px] font-black tracking-widest uppercase border border-secondary/30 mb-4">
+                                                ISAZ Sports Programme
+                                            </span>
+                                            <h2 className="text-3xl md:text-5xl font-heading font-black text-primary uppercase tracking-tight">
+                                                Sports at Martin House College
+                                            </h2>
+                                        </div>
+                                        <p className="text-slate-500 text-sm max-w-sm leading-relaxed">
+                                            Sport is an integral part of life at Martin House College, providing students with opportunities to develop leadership, teamwork, discipline, resilience, and a lifelong passion for healthy competition.
+                                        </p>
+                                    </div>
+
+                                    {/* ISAZ Sports Calendar */}
+                                    <div className="grid md:grid-cols-3 gap-6 mb-16">
+                                        {[
+                                            {
+                                                term: "January – March",
+                                                sports: ["Rugby", "Football (Soccer)", "Netball", "Cross Country", "Tennis", "Golf", "Athletics"],
+                                                color: "bg-[#0c2865]",
+                                            },
+                                            {
+                                                term: "May – July",
+                                                sports: ["Rugby", "Athletics", "Hockey"],
+                                                color: "bg-[#0c2865]/85",
+                                            },
+                                            {
+                                                term: "September",
+                                                sports: ["Volleyball", "Swimming", "Cricket"],
+                                                color: "bg-[#0c2865]/70",
+                                            },
+                                        ].map((term, idx) => (
+                                            <div key={idx} className={`${term.color} text-white rounded-3xl p-8 shadow-xl`}>
+                                                <h4 className="text-[10px] font-black tracking-[0.25em] uppercase text-white/60 mb-2">{term.term}</h4>
+                                                <ul className="space-y-2 mt-4">
+                                                    {term.sports.map((sport) => (
+                                                        <li key={sport} className="flex items-center gap-3 text-sm font-bold">
+                                                            <div className="w-1.5 h-1.5 rounded-full bg-[#e8b84b] shrink-0" />
+                                                            {sport}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Sporting Excellence — Hockey & Rugby */}
+                                    <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-8 md:p-14 mb-12 shadow-lg">
+                                        <div className="mb-8">
+                                            <span className="text-[10px] font-black tracking-widest text-slate-400 uppercase">Flagship Sports</span>
+                                            <h3 className="text-2xl md:text-4xl font-heading font-black text-primary uppercase mt-1 mb-4">Sporting Excellence</h3>
+                                            <p className="text-slate-600 text-sm leading-relaxed max-w-3xl">
+                                                Martin House College has established itself as one of Zambia's leading sporting schools, with particular success in Rugby and Hockey, our flagship sports.
+                                            </p>
+                                        </div>
+                                        <div className="grid md:grid-cols-2 gap-8">
+                                            <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                                                <Trophy className="w-8 h-8 text-[#e8b84b] mb-4" />
+                                                <h4 className="font-heading font-black text-primary uppercase tracking-tight text-lg mb-3">Hockey — Champions</h4>
+                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                    Our girls' hockey programme has enjoyed remarkable success, with the team being crowned <strong>ISAZ Hockey Champions for three consecutive years</strong>, demonstrating sustained excellence and dominance at the highest level of school hockey in Zambia.
+                                                </p>
+                                            </div>
+                                            <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                                                <Trophy className="w-8 h-8 text-[#e8b84b] mb-4" />
+                                                <h4 className="font-heading font-black text-primary uppercase tracking-tight text-lg mb-3">Rugby — Leading School</h4>
+                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                    Rugby continues to thrive at Martin House College, with our boys' teams achieving outstanding results in both the <strong>Under-16 and Under-19</strong> age groups. The school has developed a strong rugby tradition and is recognised as one of the leading rugby schools in the country.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Cecilia Krige Festival */}
+                                    <div className="bg-[#0c2865] text-white rounded-[2.5rem] p-8 md:p-14 mb-12 relative overflow-hidden shadow-2xl">
+                                        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1.5px 1.5px, white 1.5px, transparent 0)', backgroundSize: '60px 60px' }} />
+                                        <div className="relative z-10">
+                                            <span className="inline-block px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[10px] font-black tracking-widest uppercase mb-4 text-white/80">
+                                                Annual Festival
+                                            </span>
+                                            <h3 className="text-2xl md:text-4xl font-heading font-black uppercase tracking-tight mb-4">The Cecilia Krige Festival</h3>
+                                            <p className="text-white/80 text-sm leading-relaxed max-w-3xl mb-8">
+                                                Martin House College proudly hosts the Cecilia Krige Festival, an annual Rugby and Hockey festival held in honour of the founders of the school. Held annually at the end of May, the festival begins with a full day of Rugby competition before culminating in an exciting programme of Hockey fixtures on Saturday.
+                                            </p>
+                                            <div className="grid sm:grid-cols-3 gap-6">
+                                                {[
+                                                    { label: "Student Athletes 2026", value: "800+", sub: "The largest edition to date" },
+                                                    { label: "Sports Featured", value: "2", sub: "Rugby & Hockey" },
+                                                    { label: "Schools Participating", value: "Multi", sub: "From across Zambia" },
+                                                ].map((stat, i) => (
+                                                    <div key={i} className="bg-white/10 rounded-2xl p-6 border border-white/10">
+                                                        <p className="text-3xl font-heading font-black text-[#e8b84b]">{stat.value}</p>
+                                                        <p className="text-white font-bold text-sm mt-1">{stat.label}</p>
+                                                        <p className="text-white/50 text-[10px] mt-0.5">{stat.sub}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* International Sports Tours */}
+                                    <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-8 md:p-14 shadow-lg">
+                                        <div className="mb-8">
+                                            <span className="text-[10px] font-black tracking-widest text-slate-400 uppercase">Beyond Zambia</span>
+                                            <h3 className="text-2xl md:text-4xl font-heading font-black text-primary uppercase mt-1 mb-4">International Sports Tours</h3>
+                                            <p className="text-slate-600 text-sm leading-relaxed max-w-3xl">
+                                                Martin House College is committed to providing students with opportunities to compete beyond Zambia's borders. Through these international engagements, students develop confidence, cultural awareness, and a broader appreciation of sport as a vehicle for personal growth and global connection.
+                                            </p>
+                                        </div>
+                                        <div className="grid md:grid-cols-2 gap-8">
+                                            {[
+                                                {
+                                                    title: "Cape Town, South Africa",
+                                                    detail: "1st Team Hockey (Boys & Girls) — Annual tour competing against leading schools from South Africa, Zimbabwe, and Namibia.",
+                                                },
+                                                {
+                                                    title: "Zimbabwe",
+                                                    detail: "Under-14 Boys & Girls — Hockey and Cricket tours to prestigious school festivals and tournaments.",
+                                                },
+                                            ].map((tour, i) => (
+                                                <div key={i} className="flex items-start gap-4 bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+                                                    <div className="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center shrink-0 text-primary mt-1">
+                                                        <Trophy className="w-5 h-5" />
+                                                    </div>
+                                                    <div>
+                                                        <h5 className="font-heading font-black text-primary uppercase tracking-tight text-sm mb-1">{tour.title}</h5>
+                                                        <p className="text-xs text-slate-500 leading-relaxed">{tour.detail}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
                         </motion.div>
                     ) : (
                         <motion.div

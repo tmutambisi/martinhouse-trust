@@ -11,9 +11,9 @@ const achievements = [
     color: "bg-primary",
   },
   {
-    title: "ZIMSEC Recognition",
-    subtitle: "Outstanding Results",
-    footnote: "Top national ranking",
+    title: "Cambridge International",
+    subtitle: "Accredited School",
+    footnote: "IGCSE, AS & A Level",
     icon: Award,
     color: "bg-secondary",
   },
