@@ -16,8 +16,8 @@ const reasons = [
   },
   {
     icon: BookOpen,
-    title: "British & Cambridge Curriculum",
-    description: "National Curriculum for England in Prep and Cambridge qualifications in College."
+    title: "Cambridge Curriculum",
+    description: "Cambridge Curriculum in Prep and Cambridge qualifications in College."
   },
   {
     icon: Heart,
@@ -105,19 +105,9 @@ const WhyChooseUsSection = () => {
               </div>
 
               <p className="text-lg md:text-xl text-white/70 leading-relaxed font-medium">
-                Our unique day and boarding school offers British and Cambridge pathways, a Christian ethos, small classes, and a campus where children can learn, play, and grow surrounded by nature.
+                Our unique day and boarding school offers the Cambridge Curriculum pathway, a Christian ethos, small classes, and a campus where children can learn, play, and grow surrounded by nature.
               </p>
 
-              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
-                <div>
-                  <div className="text-3xl font-heading font-black text-accent mb-2">80</div>
-                  <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase">Hectares</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-heading font-black text-accent mb-2">35+ yrs</div>
-                  <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase">Legacy</div>
-                </div>
-              </div>
             </motion.div>
           </div>
 

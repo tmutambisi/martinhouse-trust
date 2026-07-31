@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { BookOpen, Dumbbell, Palette, ArrowRight, ChevronRight, Users } from "lucide-react";
+import { BookOpen, Dumbbell, Palette, ArrowRight, ChevronRight, Users, Star, Heart, Home } from "lucide-react";
 
 import navImg2 from "@/assets/primary-school/navbar/nav2.jpg";
 import navImg3 from "@/assets/primary-school/navbar/nav3.jpg";
@@ -84,16 +84,19 @@ const sections: Record<string, {
   },
   academics: {
     title: "Primary Academics",
-    subtitle: "A challenging and well-rounded curriculum for every learner.",
+    subtitle: "Inspiring curiosity and a lifelong love of learning through the Cambridge curriculum.",
     heroImage: prepSoftskills,
     content: (
       <div className="prose-premium max-w-none">
-        <h2>Curriculum Overview</h2>
+        <h2>At Martin House School</h2>
         <p>
-          The Primary School follows the Zimbabwe Ministry of Primary and Secondary
-          Education curriculum. Core subjects include English, Mathematics, Shona,
-          Science and Technology, Social Studies, Heritage Studies, and Visual and
-          Performing Arts.
+          We inspire curiosity, confidence and a lifelong love of learning through the Cambridge Primary Curriculum. From Early Years to Year 7, our learner-centred approach blends academic excellence with creativity, collaboration and strong pastoral care.
+        </p>
+        <p>
+          Children build firm foundations in literacy and numeracy in a nurturing Early Years setting, then grow into independent, critical thinkers across Key Stages 1 and 2. Studies in English, Mathematics, Science and a broad curriculum prepare students for Cambridge Checkpoint and beyond.
+        </p>
+        <p>
+          Beyond the classroom, sport, arts, clubs and educational trips enrich learning—developing confident, well-rounded individuals ready for the future.
         </p>
         <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
           {[
@@ -110,23 +113,10 @@ const sections: Record<string, {
             </div>
           ))}
         </div>
-        <h2>Assessment & Progression</h2>
-        <p>
-          Continuous assessment guides our teaching. End-of-term examinations, class
-          tests, and project submissions allow teachers to track progress and tailor
-          support. At the end of Grade 7, pupils sit the national Grade 7 examinations
-          before progressing to the College.
-        </p>
         <div className="not-prose my-8">
           <img src={labImg} alt="Science laboratory" className="w-full h-64 object-cover rounded-2xl shadow-md" />
           <p className="text-center text-slate-500 text-sm mt-3">Primary Science Laboratory</p>
         </div>
-        <h2>Extra Academic Support</h2>
-        <p>
-          Targeted reading and numeracy groups, afternoon homework clubs, and one-on-one
-          teacher sessions ensure no learner is left behind. We celebrate academic
-          achievement at our termly Prizegiving ceremonies.
-        </p>
       </div>
     ),
   },
@@ -176,6 +166,123 @@ const sections: Record<string, {
         </p>
         <div className="not-prose mt-8">
           <img src={random3} alt="Community activities" className="w-full h-56 object-cover rounded-2xl shadow-md" />
+        </div>
+      </div>
+    ),
+  },
+  pastoral: {
+    title: "Pastoral Care",
+    subtitle: "Every learner feels safe, supported and valued.",
+    heroImage: prepPastoralCare,
+    content: (
+      <div className="prose-premium max-w-none">
+        <h2>Our Approach</h2>
+        <p>
+          At Martin House, we ensure every learner feels safe, supported and valued. Pastoral care is a shared responsibility, built on strong relationships and clear communication.
+        </p>
+        <p>
+          We follow a simple, effective approach:
+        </p>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          {[
+            { title: "Notice & Support", desc: "Identify concerns early and respond with care" },
+            { title: "Communicate", desc: "Involve staff and parents where needed" },
+            { title: "Monitor", desc: "Track progress and provide ongoing support" },
+            { title: "Escalate", desc: "Act promptly on serious concerns" },
+          ].map(({ title, desc }) => (
+            <div key={title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+              <p className="font-bold text-[#0c2865] text-sm mb-1">{title}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p>
+          We encourage all students to show respect, take responsibility and seek help when needed.
+        </p>
+        <blockquote>Every learner matters. Every interaction counts.</blockquote>
+        <div className="not-prose my-8">
+          <img src={prepPastoralCare} alt="Pastoral care at Martin House Prep" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
+        </div>
+      </div>
+    ),
+  },
+  hostel: {
+    title: "Prep Hostel",
+    subtitle: "A home away from home — safe, nurturing and full of warmth.",
+    heroImage: prepBoarding,
+    content: (
+      <div className="prose-premium max-w-none">
+        <h2>A Home Away From Home</h2>
+        <p>
+          At Martin House, our Prep Hostel offers a safe, nurturing and welcoming environment for children aged 6–13. More than accommodation, it is a home where students are supported to grow in confidence, independence and character.
+        </p>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          {[
+            { title: "Environment", desc: "With dedicated hostel parents available at all times, learners feel secure, cared for and part of a close community. Through daily routines and shared experiences, students develop independence, teamwork, resilience and respect—guided by our values of Honour, Respect and Compassion." },
+            { title: "Dining", desc: "Students enjoy nutritious, balanced meals in a warm, social setting that promotes good habits, gratitude and a sense of community." },
+            { title: "Services", desc: "Our dedicated team ensures a comfortable living space, providing daily laundry, cleaning and support while encouraging students to take responsibility for their environment." },
+            { title: "Health & Wellbeing", desc: "An onsite clinic and responsive care ensure students' health and wellbeing are always prioritised, giving families peace of mind." },
+          ].map(({ title, desc }) => (
+            <div key={title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+              <p className="font-bold text-[#0c2865] text-sm mb-2">{title}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <blockquote>A supportive space where children feel at home, grow with confidence, and thrive.</blockquote>
+        <div className="not-prose my-8">
+          <img src={prepBoarding} alt="Prep Hostel" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
+        </div>
+      </div>
+    ),
+  },
+  clubs: {
+    title: "Prep Clubs",
+    subtitle: "Fun, enriching activities that bring learning to life.",
+    heroImage: prepIngarden,
+    content: (
+      <div className="prose-premium max-w-none">
+        <h2>Co-Curricular Activities</h2>
+        <p>
+          At Martin House Prep, our clubs offer every child a chance to explore their interests, develop new skills, and thrive beyond the classroom.
+        </p>
+        <div className="not-prose space-y-6 my-8">
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Book Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">Our Book Club is a welcoming and engaging space for students who enjoy books and storytelling. It brings readers together to share ideas, explore new texts and develop a deeper appreciation for reading.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">The club offers a balanced mix of lively discussions, creative activities and quiet reading time, allowing every student to participate in a way that suits them. From adventure and mystery to fantasy and non-fiction, students are encouraged to explore a wide range of genres and broaden their horizons.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Cooking Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The Prep Cooking Club offers students a fun, hands-on opportunity to explore the world of cooking and baking. Through practical activities, learners develop essential kitchen skills, including food preparation, basic cooking techniques and simple recipes.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">The club encourages confidence, creativity and independence, while also building valuable life skills such as teamwork, organisation, hygiene and time management. Students are inspired to try new foods and explore a variety of cuisines in a safe and supportive environment.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">With activities ranging from baking and simple meal preparation to themed and seasonal treats, the club creates an enjoyable space where students learn through experience—and get to enjoy what they create!</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Young Farmers</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The Young Farmers Club at Martin House gives students hands-on experience in agriculture, sustainability and rural life. Through activities such as gardening, animal care and visits from local farmers, learners develop practical skills and a deeper understanding of where food comes from.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">The club promotes responsibility, problem-solving and teamwork, while connecting classroom learning in STEM and sustainability to real-world experience. Open to all students—no farming background required—it offers a welcoming space where curiosity leads to meaningful learning and community involvement.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Music</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The Music Department at Martin House School inspires creativity, confidence and discipline through both classroom learning and co-curricular activities. It provides students with opportunities to develop their musical talents while fostering teamwork, communication and self-expression.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">Through structured lessons, rehearsals and performances, students build skills in vocal and instrumental music, while contributing to concerts, recitals and school events that enrich the wider school community.</p>
+            <div className="mt-4 space-y-2">
+              {[
+                { label: "Dance and Rhythm Club (Junior Primary)", desc: "Develops coordination, rhythm and creativity through movement and music" },
+                { label: "Ensemble & Choirs (Senior Primary & College)", desc: "Focuses on vocal training, performance and participation in school events and competitions" },
+                { label: "Primary Singing & Djembe Ensemble", desc: "Builds rhythm, aural skills and cultural awareness through music and performance" },
+              ].map(({ label, desc }) => (
+                <div key={label} className="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-slate-100">
+                  <ChevronRight className="w-3.5 h-3.5 text-[#0c2865] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-[#0c2865]">{label}</p>
+                    <p className="text-slate-600 text-xs mt-0.5">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -231,6 +338,9 @@ const sections: Record<string, {
 const tabs = [
   { key: "about", label: "About", icon: Users },
   { key: "academics", label: "Academics", icon: BookOpen },
+  { key: "pastoral", label: "Pastoral Care", icon: Heart },
+  { key: "hostel", label: "Hostel", icon: Home },
+  { key: "clubs", label: "Clubs", icon: Star },
   { key: "culture", label: "Culture", icon: Palette },
   { key: "sport", label: "Sport", icon: Dumbbell },
 ];

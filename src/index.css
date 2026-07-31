@@ -487,11 +487,12 @@ html {
   }
 
   .prose-premium p {
-    @apply mb-6 text-lg text-muted-foreground/90 leading-relaxed first-of-type:text-xl first-of-type:text-foreground first-of-type:font-medium;
+    @apply mb-6 text-lg text-muted-foreground/90 leading-relaxed text-justify first-of-type:text-xl first-of-type:text-foreground first-of-type:font-medium;
   }
 
-  .prose-premium p:first-of-type::first-letter {
-    @apply float-left text-6xl font-black text-primary mr-3 mt-1 leading-[0.85] uppercase;
+  /* Justify inline card text inside not-prose sections */
+  .prose-premium .not-prose p {
+    @apply text-justify;
   }
 
   .prose-premium blockquote {

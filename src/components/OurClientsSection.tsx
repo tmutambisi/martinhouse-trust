@@ -4,7 +4,7 @@ const pathways = [
   {
     title: "Prep School",
     description:
-      "British National Curriculum from Early Years through Year 7, with small classes and a strong foundation in literacy, numeracy, and character.",
+      "Cambridge Curriculum from Early Years through Year 7, with small classes and a strong foundation in literacy, numeracy, and character.",
   },
   {
     title: "Primary School",

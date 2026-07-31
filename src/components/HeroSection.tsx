@@ -30,7 +30,7 @@ const slides = [
     id: 2,
     title: "Academics That Last",
     category: "Prep & College",
-    description: "British National Curriculum in Prep and Cambridge in College, with continuous assessment, small classes, and a computer centre with internet access.",
+    description: "Cambridge Curriculum in Prep and Cambridge in College, with continuous assessment, small classes, and a computer centre with internet access.",
     bgColor: "#0c2865",
     image: sNav1,
     dark: true,

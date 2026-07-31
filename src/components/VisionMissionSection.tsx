@@ -58,7 +58,7 @@ const VisionMissionSection = () => {
                         {
                             num: "03",
                             title: "Our Mission",
-                            desc: "To provide a safe, Christian, holistic education through the British National Curriculum and Cambridge pathways, supported by sport, culture, boarding, and community outreach."
+                            desc: "To provide a safe, Christian, holistic education through the Cambridge Curriculum and Cambridge pathways, supported by sport, culture, boarding, and community outreach."
                         }
                     ].map((item, index) => (
                         <motion.div

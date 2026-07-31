@@ -24,6 +24,7 @@ const ParentsPage = lazy(() => import("./pages/ParentsPage"));
 const NewsArticlePage = lazy(() => import("./pages/NewsArticlePage"));
 const NewsPage = lazy(() => import("./pages/NewsPage"));
 const LeadershipPage = lazy(() => import("./pages/LeadershipPage"));
+const TestimonialsPage = lazy(() => import("./pages/TestimonialsPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const PrimaryPage = lazy(() => import("./pages/PrimaryPage"));
 const HighSchoolPage = lazy(() => import("./pages/HighSchoolPage"));
@@ -73,6 +74,7 @@ const router = createBrowserRouter(
         { path: "/faq", element: <FAQPage /> },
         { path: "/about/:section", element: <AboutPage /> },
         { path: "/about", element: <AboutPage /> },
+        { path: "/about/testimonials", element: <TestimonialsPage /> },
         { path: "/parents/:section", element: <ParentsPage /> },
         { path: "/parents", element: <ParentsPage /> },
         { path: "/news/post/:slug", element: <NewsArticlePage /> },

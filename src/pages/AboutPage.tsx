@@ -13,7 +13,7 @@ import heroImage from "@/assets/primary-school/random/random1.jpg";
 import heroImage2 from "@/assets/primary-school/random/random2.jpg";
 import heroImage3 from "@/assets/primary-school/random/random3.jpg";
 import heroImage4 from "@/assets/secondary-school/school/random1.jpg";
-import heroAbout from "@/assets/secondary-school/school/bio1.jpg"; // Default hero for generic about
+import heroAbout from "@/assets/primary-school/navbar/nav5.jpg"; // Default hero for generic about
 
 const aboutPagesData: Record<string, {
   title: string;

@@ -61,16 +61,16 @@ const AboutSection = () => {
             {/* Stats Row */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 pt-10 border-t border-slate-100">
               <div className="space-y-1 sm:space-y-2">
-                <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">35 years</div>
+                <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">22 years</div>
                 <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">Of excellence</div>
               </div>
               <div className="space-y-1 sm:space-y-2">
-                <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">1,200+</div>
+                <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">250+</div>
                 <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">Students enrolled</div>
               </div>
               <div className="space-y-1 sm:space-y-2">
-                <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">98%</div>
-                <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">Pass rate</div>
+                <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">7 years</div>
+                <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">College excellence</div>
               </div>
             </div>
           </motion.div>
@@ -91,7 +91,7 @@ const AboutSection = () => {
               <div className="aspect-square bg-primary rounded-2xl p-10 flex flex-col justify-between text-white shadow-2xl transition-all duration-300 group hover:bg-secondary">
                 <Trophy className="w-8 h-8 text-secondary group-hover:text-white transition-colors" />
                 <div>
-                  <h3 className="card-heading font-bold tracking-tight leading-none mb-4">British & Cambridge</h3>
+                   <h3 className="card-heading font-bold tracking-tight leading-none mb-4">Cambridge Curriculum</h3>
                   <p className="text-[11px] font-bold tracking-wider opacity-60 group-hover:opacity-100 uppercase">Prep & College</p>
                 </div>
               </div>

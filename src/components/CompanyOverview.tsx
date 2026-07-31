@@ -18,7 +18,7 @@ const CompanyOverview = () => {
     ];
 
     const accreditations = [
-        "British National Curriculum (Prep School)",
+        "Cambridge Curriculum (Prep School)",
         "Cambridge International Examinations (College)",
         "Christian Ethos & Character Education"
     ];

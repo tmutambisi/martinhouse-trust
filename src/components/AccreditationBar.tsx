@@ -21,12 +21,6 @@ const accreditations: AccreditationItem[] = [
   {
     name: "ISAZ Member",
     logo: isazLogo,
-    // ISAZ has no link
-  },
-  {
-    name: "Cambridge Primary",
-    logo: cambridgeLogo,
-    url: "https://www.cambridgeinternational.org/",
   },
   {
     name: "Codementum",
@@ -37,11 +31,6 @@ const accreditations: AccreditationItem[] = [
     name: "iGeo Geography",
     logo: igeoLogo,
     url: "https://geoolympiad.org/",
-  },
-  {
-    name: "IBSC Member",
-    badge: "IBSC Member",
-    color: "bg-slate-700",
   },
 ];
 

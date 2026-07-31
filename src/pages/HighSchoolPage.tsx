@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { BookOpen, Dumbbell, Palette, ArrowRight, ChevronRight, Users, GraduationCap } from "lucide-react";
+import { BookOpen, Dumbbell, Palette, ArrowRight, ChevronRight, Users, GraduationCap, Star, Heart } from "lucide-react";
 
 import nav1 from "@/assets/secondary-school/navbar/nav1.jpg";
 import nav2 from "@/assets/secondary-school/navbar/nav2.jpg";
@@ -103,15 +103,56 @@ const sections: Record<string, {
             </div>
           ))}
         </div>
-        <h2>Cambridge Curriculum</h2>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
+        <h2>Key Information</h2>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
           {[
-            { title: "Cambridge Checkpoint", items: ["English Language", "Mathematics", "Science", "Global Perspectives"] },
-            { title: "Cambridge IGCSE", items: ["English as a First Language", "Extended Mathematics", "Triple / Co-ordinated Sciences", "Business Studies & Economics", "History & Geography", "French & Afrikaans"] },
-            { title: "Cambridge AS & A Level", items: ["Mathematics & Further Maths", "Physics, Chemistry, Biology", "Business & Economics", "History & English Literature", "Art & Design"] },
-          ].map(({ title, items }) => (
-            <div key={title} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-              <h3 className="font-bold text-[#0c2865] text-sm mb-4 pb-2 border-b border-slate-200 uppercase tracking-wide">{title}</h3>
+            { label: "Curriculum", value: "Cambridge (Checkpoint, IGCSE, AS & A Level)" },
+            { label: "Faculty", value: "Expert, passionate subject specialists committed to excellence" },
+            { label: "Support", value: "Personalised learning through close collaboration with the Learning Support department" },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+              <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 text-left">{label}</p>
+              <p className="text-sm font-bold text-[#0c2865] text-left">{value}</p>
+            </div>
+          ))}
+        </div>
+        <h2>AS &amp; A Level Subjects</h2>
+        <div className="not-prose grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
+          {[
+            "Art & Design",
+            "Biology",
+            "Business Studies",
+            "Chemistry",
+            "Computer Science",
+            "Design & Technology",
+            "English Language (AS Level)",
+            "Environmental Management (AS Level)",
+            "English Literature",
+            "Geography",
+            "Mathematics",
+            "Physics",
+            "History",
+          ].map(subj => (
+            <div key={subj} className="flex items-center gap-2 bg-slate-50 rounded-xl px-4 py-3">
+              <ChevronRight className="w-3.5 h-3.5 text-[#0c2865] flex-shrink-0" />
+              <span className="text-sm font-medium text-black">{subj}</span>
+            </div>
+          ))}
+        </div>
+        <h2>IGCSE Subject Groups</h2>
+        <p>
+          Students take three compulsory subjects: <strong>Mathematics</strong>, <strong>English Language</strong>, and <strong>English Literature</strong>. In addition, each student selects one subject from each of Groups A–E (five choice subjects), for a total of eight IGCSE subjects. At least one choice must be a science: Biology, Chemistry or Physics.
+        </p>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          {[
+            { group: "Group A", items: ["Biology", "Chemistry", "Physics"] },
+            { group: "Group B", items: ["Additional Mathematics", "French", "Design & Technology"] },
+            { group: "Group C", items: ["Physical Education", "Business Studies", "ICT"] },
+            { group: "Group D", items: ["Computer Science", "Art & Design"] },
+            { group: "Group E", items: ["History", "Geography"] },
+          ].map(({ group, items }) => (
+            <div key={group} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <h3 className="font-bold text-[#0c2865] text-xs mb-3 pb-2 border-b border-slate-200 uppercase tracking-widest">{group}</h3>
               <ul className="space-y-2">
                 {items.map(item => (
                   <li key={item} className="flex items-center gap-2 text-sm text-slate-700">
@@ -123,28 +164,127 @@ const sections: Record<string, {
             </div>
           ))}
         </div>
-        <h2>Key Information</h2>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-          {[
-            { label: "Curriculum", value: "Cambridge (Checkpoint, IGCSE, AS & A Level)" },
-            { label: "Faculty", value: "Expert, passionate subject specialists committed to excellence" },
-            { label: "Support", value: "Personalised learning through close collaboration with the Learning Support department" },
-          ].map(({ label, value }) => (
-            <div key={label} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
-              <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1">{label}</p>
-              <p className="text-sm font-bold text-[#0c2865]">{value}</p>
-            </div>
-          ))}
-        </div>
         <div className="not-prose my-8">
           <img src={highxlSpeechNPrize} alt="College academics" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
         </div>
-        <h2>Academic Excellence</h2>
+        <h2>Learning Support</h2>
         <p>
-          Martin House College consistently achieves outstanding Cambridge examination
-          results. Top performers are recognised at our annual Prize Day, and academic
-          scholarships are available for high-achieving pupils entering Form 1 and Form 4.
+          At Martin House College, our Learning Support Department ensures that every student can learn with confidence and succeed without barriers. We provide tailored support that recognises individual needs, equipping learners with practical strategies to enhance their understanding and unlock their full potential.
         </p>
+        <p>
+          Our goal is not only to support learning, but to build independence, resilience and self-belief. Through personalised guidance, students develop essential skills such as organisation, time management, comprehension and effective revision—skills that benefit them far beyond the classroom.
+        </p>
+        <p>
+          We also prepare students to make confident use of approved access arrangements in assessments and examinations. By familiarising them with these provisions, we create a fair and supportive environment in which every student can demonstrate their true ability.
+        </p>
+      </div>
+    ),
+  },
+  pastoral: {
+    title: "Pastoral Care",
+    subtitle: "A safe, inclusive and nurturing environment for every student.",
+    heroImage: highxlGirls,
+    content: (
+      <div className="prose-premium max-w-none">
+        <h2>Overview</h2>
+        <p>
+          At Martin House, Pastoral Care is at the heart of student life. Guided by our values of Honour, Respect and Compassion, we create a safe, inclusive and nurturing environment where every learner feels valued, supported and empowered to succeed.
+        </p>
+        <h2>Purpose</h2>
+        <p>
+          Our aim is to develop the whole individual—academically, socially, emotionally and spiritually. We believe students flourish when they feel secure, understood and respected. Through strong pastoral support, we foster confidence, resilience, positive behaviour and a strong sense of responsibility, preparing students to make meaningful contributions to society.
+        </p>
+        <h2>Student Experience</h2>
+        <p>
+          Pastoral Care is delivered through daily interactions and structured programmes that promote wellbeing and personal growth:
+        </p>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          {[
+            { title: "Tutor Time", desc: "Personalised guidance, monitoring progress and supporting wellbeing" },
+            { title: "Assemblies", desc: "Celebrating achievement and reinforcing values" },
+            { title: "Chapel Services", desc: "Encouraging reflection, integrity and spiritual growth" },
+          ].map(({ title, desc }) => (
+            <div key={title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+              <p className="font-bold text-[#0c2865] text-sm mb-2">{title}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p>
+          Through this holistic approach, we nurture confident, respectful and compassionate individuals ready to thrive both within the school and beyond.
+        </p>
+        <div className="not-prose my-8">
+          <img src={highxlArts} alt="Pastoral care at Martin House" className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
+        </div>
+      </div>
+    ),
+  },
+  clubs: {
+    title: "College Clubs",
+    subtitle: "Vibrant co-curricular activities that inspire, challenge, and connect.",
+    heroImage: highxlArts,
+    content: (
+      <div className="prose-premium max-w-none">
+        <h2>Co-Curricular Life</h2>
+        <p>
+          At Martin House College, life extends well beyond the classroom. Our clubs offer every student a space to discover passions, build skills, and connect with peers who share their interests.
+        </p>
+        <div className="not-prose space-y-6 my-8">
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Afrikaans Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The Afrikaans Club at Martin House offers a welcoming and engaging space for students to build confidence in their language skills. Through interactive conversations, games and cultural activities, learners develop their ability to speak and understand Afrikaans in real-life contexts.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">The club also provides valuable academic support, particularly for native speakers preparing for IGCSE Afrikaans. Students strengthen their reading, writing, comprehension and oral communication skills, ensuring they are well-prepared for examination success.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">Above all, the club fosters a genuine appreciation of the language and its culture, creating a relaxed, inclusive environment where students learn from one another and enjoy the journey of language learning.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Coding Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The Coding Club at Martin House introduces students to programming through the Codementum platform. Learners develop skills in Python, JavaScript and HTML/CSS while building creativity, problem-solving and logical thinking at their own pace.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">The club also offers a yearly international tour linked to competitions, giving students global exposure. In 2025, the tour was in Brazil, and in 2026, it took place in Rome.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">A dynamic space where innovation, collaboration and future-ready digital skills thrive.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Community &amp; Outreach Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">At Martin House, the Community &amp; Outreach Club brings students, parents and staff together in the spirit of service over self. We make a meaningful impact through fundraising for less privileged communities and by hosting key events such as the Mother's Day Tea and Christmas Fair.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">Students develop leadership, teamwork and character, while contributing to a caring and united school community. A welcoming space where every student can make a difference and see the power of giving back.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">MUN &amp; Debate Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The MUN and Debate Club at Martin House empowers students to become confident speakers, critical thinkers and future leaders. Through debates, research and MUN simulations, students learn to analyse global issues, build strong arguments and engage respectfully with diverse perspectives.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">Students take part in leading competitions such as the World Scholar's Cup, National Debate League and international MUN conferences. In 2026, Martin House hosted the NDL Regional Championships and competed in the Pan African Debating Championship in Johannesburg, with regular participation at St John's College MUN.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">We also proudly host our own international MUN conference, including Zambia's first Prep MUN in 2026—encouraging younger students to engage in global dialogue.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">A vibrant platform for developing articulate, informed and compassionate global citizens.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Art</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">Art continues to thrive at Martin House College, forming a vibrant part of the school's cultural life. Our recent exhibition and auction showcased an inspiring collection of work from pupils and local community artists, attracting enthusiastic support and raising valuable funds. The event was a great success, celebrating creativity, talent and collaboration. Across all year groups, students demonstrate remarkable artistic ability, ensuring that art remains a lively and valued thread throughout the school community.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-3">Chess Club</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">The Chess Club at Martin House offers students a stimulating and enjoyable way to develop strategic thinking, concentration and problem-solving skills. In a supportive and inclusive environment, learners of all abilities are encouraged to explore new strategies and engage in friendly competition.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">Through chess, students build patience, creativity, resilience and strong decision-making skills—qualities that support success both in and beyond the classroom. A rewarding space where confidence grows and a lasting appreciation for the game is developed.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 className="font-bold text-[#0c2865] text-base mb-1">JETS Science Club</h3>
+            <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-3">Junior Engineers, Technicians and Scientists Club</p>
+            <p className="text-slate-700 text-sm leading-relaxed">The JETS Club is a vibrant community of young innovators, problem-solvers, and future scientists. Through exciting experiments, investigations, and hands-on projects, members develop scientific skills, creativity, critical thinking, and a passion for discovery.</p>
+            <p className="text-slate-700 text-sm leading-relaxed mt-2">Our members don't just learn science from textbooks—they experience it firsthand. From exciting chemical reactions to engineering challenges and scientific investigations, every meeting is an opportunity to explore, learn, and innovate.</p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {[
+                "Conduct exciting experiments",
+                "Develop practical scientific skills",
+                "Build creativity and problem-solving abilities",
+                "Participate in STEM competitions and projects",
+                "Prepare for careers in science, technology, engineering, and medicine",
+              ].map(item => (
+                <div key={item} className="flex items-start gap-2">
+                  <ChevronRight className="w-3.5 h-3.5 text-[#0c2865] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-slate-500 text-xs italic mt-4">Think. Experiment. Discover. Innovate.</p>
+          </div>
+        </div>
       </div>
     ),
   },
@@ -221,16 +361,6 @@ const sections: Record<string, {
             <img key={i} src={src} alt={`Cricket ${i + 1}`} className="w-full h-48 object-cover rounded-2xl shadow-sm hover:scale-[1.02] transition-transform duration-300" />
           ))}
         </div>
-        <h2>Girls' Sport</h2>
-        <p>
-          We are committed to equal opportunity in sport for all students. Our girls'
-          netball, basketball, and athletics teams have won multiple provincial
-          championships. We provide the same quality of coaching, facilities, and
-          competitive exposure for all.
-        </p>
-        <div className="not-prose my-6">
-          <img src={highxlGirls} alt="Girls sport" className="w-full h-56 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300" />
-        </div>
         <h2>Facilities</h2>
         <p>
           The College sports facilities include two football pitches, a netball court,
@@ -249,6 +379,8 @@ const sections: Record<string, {
 const tabs = [
   { key: "about", label: "About", icon: Users },
   { key: "academics", label: "Academics", icon: BookOpen },
+  { key: "pastoral", label: "Pastoral Care", icon: Heart },
+  { key: "clubs", label: "Clubs", icon: Star },
   { key: "culture", label: "Culture", icon: Palette },
   { key: "sport", label: "Sport", icon: Dumbbell },
 ];
