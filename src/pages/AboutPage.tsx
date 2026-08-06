@@ -30,7 +30,7 @@ const aboutPagesData: Record<string, {
   "testimonials": {
     title: "Testimonials",
     subtitle: "What our parents and students say",
-    content: "Our parents' and students' success and satisfaction is our greatest achievement. Read what members of the community across Zimbabwe have to say about their experience with Martin House.",
+    content: "Our parents' and students' success and satisfaction is our greatest achievement. Read what members of the community across Zambia have to say about their experience with Martin House.",
     image: heroImage2,
   },
   "social-responsibility": {

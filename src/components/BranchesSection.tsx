@@ -144,7 +144,7 @@ const BranchesSection = () => {
               </span> locations
             </motion.h2>
             <p className="text-xl text-slate-500 font-bold font-body mt-8 leading-relaxed max-w-2xl border-l-4 border-primary/20 pl-6">
-              Our campuses and admissions offices are strategically located across Zimbabwe, making quality education accessible to families nationwide.
+              Our campuses and admissions offices are strategically located across Zambia, making quality education accessible to families nationwide.
             </p>
           </div>
 

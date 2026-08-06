@@ -22,7 +22,7 @@ import labImg from "@/assets/primary-school/sports/lab.jpg";
 const primaryLabSlides = [
   {
     src: labImg,
-    alt: "Primary Science Laboratory",
+    alt: "Primary school students",
   },
   {
     src: random1,
@@ -42,13 +42,13 @@ const PrimaryLabSlideshow = () => {
 
   return (
     <div className="not-prose my-8">
-      <div className="relative overflow-hidden rounded-2xl shadow-md">
+      <div className="relative overflow-hidden rounded-2xl shadow-md bg-slate-50">
         <AnimatePresence initial={false} mode="wait">
           <motion.img
             key={primaryLabSlides[currentSlide].src}
             src={primaryLabSlides[currentSlide].src}
             alt={primaryLabSlides[currentSlide].alt}
-            className="w-full h-64 object-cover rounded-2xl"
+            className="w-full h-72 sm:h-96 md:h-[440px] object-cover object-top rounded-2xl"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
@@ -85,7 +85,6 @@ const PrimaryLabSlideshow = () => {
           ))}
         </div>
       </div>
-      <p className="text-center text-slate-500 text-sm mt-3">Primary Science Laboratory</p>
     </div>
   );
 };
@@ -118,7 +117,7 @@ const sections: Record<string, {
           inside and outside the classroom.
         </p>
         <p>
-          Our dedicated teachers follow the Zimbabwean national curriculum while
+          Our dedicated teachers follow the Cambridge Primary Curriculum while
           enriching every lesson with hands-on activities, project-based learning, and
           real-world application. We believe that when children are engaged and
           challenged, they become lifelong learners.
@@ -206,7 +205,7 @@ const sections: Record<string, {
         <h2>Heritage Studies</h2>
         <p>
           Heritage Studies lessons and dedicated cultural days help pupils appreciate
-          Zimbabwe's rich history, languages, and traditions. Visits to historical
+          Zambia's rich history, languages, and traditions. Visits to historical
           sites and guest speakers bring these lessons to life.
         </p>
         <blockquote>

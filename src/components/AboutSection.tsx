@@ -22,14 +22,8 @@ const AboutSection = () => {
             whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="space-y-8 relative pl-12 md:pl-24"
+            className="space-y-8 relative"
           >
-            {/* Vertical text */}
-            <div className="absolute left-0 top-0 h-full w-12 flex items-start justify-center">
-              <h2 className="origin-top-left -rotate-90 text-[clamp(4rem,7vw,6.5rem)] font-heading font-black tracking-widest text-transparent uppercase opacity-20 pointer-events-none whitespace-nowrap translate-y-[220px]" style={{ WebkitTextStroke: '2px #0f172a' }}>
-                About Us
-              </h2>
-            </div>
 
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground mb-8">
