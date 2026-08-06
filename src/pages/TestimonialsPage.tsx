@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -140,8 +140,115 @@ const StarRating = ({ rating }: { rating: number }) => (
   </div>
 );
 
+const TestimonialsCarousel = () => {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+
+  // Auto-advance every 6 seconds; pause on hover
+  React.useEffect(() => {
+    if (paused) return;
+    const timer = setInterval(() => {
+      setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [paused]);
+
+  const t = testimonials[current];
+
+  return (
+    <div
+      className="py-20 px-4 bg-gradient-to-b from-white to-slate-50"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div className="max-w-3xl mx-auto">
+
+        {/* Card */}
+        <div className="relative">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className="bg-white rounded-[2rem] border border-slate-100 shadow-xl px-8 py-10 md:px-14 md:py-14 flex flex-col gap-6 text-center"
+          >
+            {/* Large decorative quote mark */}
+            <div className="text-[80px] leading-none text-[#0c2865]/10 font-serif select-none -mb-6">&ldquo;</div>
+
+            {/* The actual quote — full text, no truncation */}
+            <p className="text-slate-800 text-base md:text-lg leading-relaxed font-medium italic">
+              {t.overall}
+            </p>
+
+            {/* Attribution */}
+            <div className="flex flex-col items-center gap-1 pt-4 border-t border-slate-100">
+              <div className="w-10 h-10 rounded-full bg-[#0c2865] flex items-center justify-center text-white font-extrabold text-base">
+                {t.consent === "named" ? t.name.charAt(0) : "?"}
+              </div>
+              <p className="font-bold text-[#0c2865] text-sm mt-1">{t.name}</p>
+              <p className="text-slate-400 text-xs">{t.relationship}</p>
+              <StarRating rating={t.rating} />
+            </div>
+          </motion.div>
+
+          {/* Arrow Buttons */}
+          <button
+            onClick={() => { prev(); setPaused(true); }}
+            aria-label="Previous testimonial"
+            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-2xl bg-white border border-slate-200 shadow-md hover:bg-[#0c2865] hover:text-white hover:border-[#0c2865] transition-all duration-200 flex items-center justify-center text-slate-500"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => { next(); setPaused(true); }}
+            aria-label="Next testimonial"
+            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-2xl bg-white border border-slate-200 shadow-md hover:bg-[#0c2865] hover:text-white hover:border-[#0c2865] transition-all duration-200 flex items-center justify-center text-slate-500"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2 mt-8 flex-wrap">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => { setCurrent(i); setPaused(true); }}
+              aria-label={`Go to testimonial ${i + 1}`}
+              className={`rounded-full transition-all duration-300 ${
+                i === current
+                  ? "w-8 h-2.5 bg-[#0c2865]"
+                  : "w-2.5 h-2.5 bg-slate-200 hover:bg-slate-400"
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Progress bar */}
+        {!paused && (
+          <div className="mt-6 max-w-xs mx-auto h-0.5 bg-slate-200 rounded-full overflow-hidden">
+            <motion.div
+              key={current}
+              className="h-full bg-[#0c2865] rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 6, ease: "linear" }}
+            />
+          </div>
+        )}
+
+        <p className="text-center text-[11px] text-slate-400 font-medium mt-3 tracking-wide">
+          {paused ? "Slideshow paused — move away to resume" : `Slide ${current + 1} of ${testimonials.length}`}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const TestimonialsPage = () => {
-  const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-white font-body">
@@ -160,13 +267,7 @@ const TestimonialsPage = () => {
           </svg>
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/60 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full"
-          >
-            Martin House · Testimonials
-          </motion.span>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -208,85 +309,8 @@ const TestimonialsPage = () => {
         </div>
       </div>
 
-      {/* Testimonials Grid */}
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => {
-            const isExpanded = expanded === i;
-            const truncated = t.overall.length > 200;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
-                className="bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 p-7 flex flex-col gap-4"
-              >
-                {/* Header */}
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="font-bold text-[#0c2865] text-sm">{t.name}</p>
-                    <p className="text-slate-400 text-xs">{t.relationship}</p>
-                  </div>
-                  <StarRating rating={t.rating} />
-                </div>
-
-                {/* Quote icon */}
-                <Quote className="w-6 h-6 text-[#0c2865]/20 flex-shrink-0" />
-
-                {/* Overall experience */}
-                <div>
-                  <p className="text-slate-700 text-sm leading-relaxed">
-                    {isExpanded || !truncated
-                      ? t.overall
-                      : t.overall.slice(0, 200) + "…"}
-                  </p>
-                  {truncated && (
-                    <button
-                      onClick={() => setExpanded(isExpanded ? null : i)}
-                      className="mt-2 text-[#0c2865] text-xs font-bold hover:underline"
-                    >
-                      {isExpanded ? "Show less" : "Read more"}
-                    </button>
-                  )}
-                </div>
-
-                {/* What they appreciate */}
-                {isExpanded && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    className="border-t border-slate-100 pt-4 space-y-3"
-                  >
-                    {t.growth && (
-                      <div>
-                        <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1">Growth & Development</p>
-                        <p className="text-slate-600 text-sm leading-relaxed">{t.growth}</p>
-                      </div>
-                    )}
-                    {t.appreciate && (
-                      <div>
-                        <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1">What They Appreciate Most</p>
-                        <p className="text-slate-600 text-sm leading-relaxed">{t.appreciate}</p>
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-
-                {/* Footer */}
-                <div className="mt-auto pt-2 border-t border-slate-50">
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-slate-300">
-                    {t.consent === "named" ? "Published with permission" : "Published anonymously"}
-                  </span>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </div>
-
-
+      {/* Testimonials Carousel */}
+      <TestimonialsCarousel />
 
       <Footer />
     </div>

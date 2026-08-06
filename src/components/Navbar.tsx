@@ -30,10 +30,10 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    href: "/quote",
+    href: "/contact",
     label: "Admissions",
     children: [
-      { href: "/quote", label: "Admissions & Entry" },
+      { href: "/contact", label: "Admissions & Entry" },
       { href: "/parents/boarding-requirements", label: "Boarding Info" },
       { href: "/parents/uniform-requirements", label: "Uniform Info" },
     ],

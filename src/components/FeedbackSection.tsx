@@ -126,7 +126,7 @@ const FeedbackSection = () => {
                     id="feedback-phone"
                     name="phone"
                     type="tel"
-                    placeholder="+263..."
+                    placeholder="+260..."
                     className="h-14 bg-slate-50 border-none rounded-2xl text-foreground font-bold focus-visible:ring-primary/20"
                   />
                 </div>

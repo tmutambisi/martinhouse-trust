@@ -117,11 +117,11 @@ const FeedbackPage = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-2">Email Address</Label>
-                    <Input name="email" type="email" value={form.email} onChange={handleChange} required placeholder="name@company.co.zw" className="h-14 bg-slate-50 border-none rounded-2xl font-bold focus-visible:ring-primary/20" />
+                    <Input name="email" type="email" value={form.email} onChange={handleChange} required placeholder="name@company.co.zm" className="h-14 bg-slate-50 border-none rounded-2xl font-bold focus-visible:ring-primary/20" />
                   </div>
                   <div className="space-y-3">
                     <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-2">Phone Number</Label>
-                    <Input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="+263..." className="h-14 bg-slate-50 border-none rounded-2xl font-bold focus-visible:ring-primary/20" />
+                    <Input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="+260..." className="h-14 bg-slate-50 border-none rounded-2xl font-bold focus-visible:ring-primary/20" />
                   </div>
                 </div>
 

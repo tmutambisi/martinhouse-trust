@@ -177,7 +177,7 @@ export const ServicesPage = () => {
                                                     Enroll your child at Martin House College and secure a pathway to global academic opportunities and character development.
                                                 </p>
                                                 <Button asChild className="rounded-full h-12 px-8 bg-secondary text-primary font-black text-xs tracking-widest uppercase hover:bg-white hover:scale-105 transition-all shadow-lg w-full sm:w-auto">
-                                                    <Link to="/quote">
+                                                    <Link to="/contact">
                                                         Apply Now
                                                     </Link>
                                                 </Button>
@@ -506,9 +506,7 @@ export const ServicesPage = () => {
                                     <div className="bg-[#0c2865] text-white rounded-[2.5rem] p-8 md:p-14 mb-12 relative overflow-hidden shadow-2xl">
                                         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1.5px 1.5px, white 1.5px, transparent 0)', backgroundSize: '60px 60px' }} />
                                         <div className="relative z-10">
-                                            <span className="inline-block px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[10px] font-black tracking-widest uppercase mb-4 text-white/80">
-                                                Annual Festival
-                                            </span>
+
                                             <h3 className="text-2xl md:text-4xl font-heading font-black uppercase tracking-tight mb-4">The Cecilia Krige Festival</h3>
                                             <p className="text-white/80 text-sm leading-relaxed max-w-3xl mb-8">
                                                 Martin House College proudly hosts the Cecilia Krige Festival, an annual Rugby and Hockey festival held in honour of the founders of the school. Held annually at the end of May, the festival begins with a full day of Rugby competition before culminating in an exciting programme of Hockey fixtures on Saturday.
@@ -634,7 +632,7 @@ export const ServicesPage = () => {
                                                     Give your child a nurturing, world-class foundation under the guidance of our expert primary educators.
                                                 </p>
                                                 <Button asChild className="rounded-full h-12 px-8 bg-secondary text-primary font-black text-xs tracking-widest uppercase hover:bg-white hover:scale-105 transition-all shadow-lg w-full sm:w-auto">
-                                                    <Link to="/quote">
+                                                     <Link to="/contact">
                                                         Apply Now
                                                     </Link>
                                                 </Button>
@@ -882,8 +880,8 @@ export const ServicesPage = () => {
                                 Schedule a physical campus tour or submit an admissions enquiry directly to our registrar's office.
                             </p>
                             <Button asChild size="lg" className="h-16 px-12 rounded-full bg-secondary text-primary font-black tracking-wider shadow-2xl hover:scale-105 hover:bg-white transition-all duration-300 relative z-10 text-xs uppercase">
-                                <Link to="/quote">
-                                    Admissions & Enquiries
+                                <Link to="/contact">
+                                    Admissions &amp; Enquiries
                                 </Link>
                             </Button>
                         </motion.div>

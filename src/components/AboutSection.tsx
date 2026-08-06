@@ -62,7 +62,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 pt-10 border-t border-slate-100">
               <div className="space-y-1 sm:space-y-2">
                 <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">22 years</div>
-                <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">Of excellence</div>
+                <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">Of Prep Excellence</div>
               </div>
               <div className="space-y-1 sm:space-y-2">
                 <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">250+</div>
@@ -70,7 +70,7 @@ const AboutSection = () => {
               </div>
               <div className="space-y-1 sm:space-y-2">
                 <div className="text-[clamp(1.2rem,3vw,2rem)] font-heading font-bold text-foreground tracking-tight">7 years</div>
-                <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">College excellence</div>
+                <div className="text-xs sm:text-[15px] text-primary font-bold tracking-wider leading-none uppercase">Of College Excellence</div>
               </div>
             </div>
           </motion.div>

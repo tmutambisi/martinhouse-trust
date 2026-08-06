@@ -19,6 +19,77 @@ import sports4 from "@/assets/primary-school/sports/sports4.jpg";
 import sports5 from "@/assets/primary-school/sports/sports5.jpg";
 import labImg from "@/assets/primary-school/sports/lab.jpg";
 
+const primaryLabSlides = [
+  {
+    src: labImg,
+    alt: "Primary Science Laboratory",
+  },
+  {
+    src: random1,
+    alt: "Primary school classroom activity",
+  },
+  {
+    src: random2,
+    alt: "Primary pupils working together",
+  },
+];
+
+const PrimaryLabSlideshow = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + primaryLabSlides.length) % primaryLabSlides.length);
+  const handleNext = () => setCurrentSlide((prev) => (prev + 1) % primaryLabSlides.length);
+
+  return (
+    <div className="not-prose my-8">
+      <div className="relative overflow-hidden rounded-2xl shadow-md">
+        <AnimatePresence initial={false} mode="wait">
+          <motion.img
+            key={primaryLabSlides[currentSlide].src}
+            src={primaryLabSlides[currentSlide].src}
+            alt={primaryLabSlides[currentSlide].alt}
+            className="w-full h-64 object-cover rounded-2xl"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.35 }}
+          />
+        </AnimatePresence>
+
+        <button
+          type="button"
+          aria-label="Previous slide"
+          onClick={handlePrev}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/80 text-slate-900 shadow-lg hover:bg-white transition"
+        >
+          <ChevronRight className="w-5 h-5 rotate-180" />
+        </button>
+        <button
+          type="button"
+          aria-label="Next slide"
+          onClick={handleNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/80 text-slate-900 shadow-lg hover:bg-white transition"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+          {primaryLabSlides.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => setCurrentSlide(index)}
+              className={`h-2 rounded-full transition-all duration-200 ${index === currentSlide ? "w-8 bg-primary" : "w-4 bg-white/70 hover:bg-white"}`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+      <p className="text-center text-slate-500 text-sm mt-3">Primary Science Laboratory</p>
+    </div>
+  );
+};
+
 import prepRunning from "@/assets/prep-running.jpg";
 import prepSoftskills from "@/assets/prep-softskills.jpg";
 import prepPastoralCare from "@/assets/prep-pastoral care.jpg";
@@ -98,25 +169,8 @@ const sections: Record<string, {
         <p>
           Beyond the classroom, sport, arts, clubs and educational trips enrich learning—developing confident, well-rounded individuals ready for the future.
         </p>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
-          {[
-            { icon: BookOpen, title: "Literacy & Numeracy", desc: "Strong foundations in reading, writing, and mathematics through structured daily practice and enrichment activities." },
-            { icon: Palette, title: "Creative Arts", desc: "Drama, music, art, and design are integral parts of our timetable, developing expression and lateral thinking." },
-            { icon: Users, title: "Social Learning", desc: "Group projects, debates, and presentations build communication skills and collaborative mindsets from an early age." },
-          ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
-              <div className="w-10 h-10 bg-[#0c2865] rounded-xl flex items-center justify-center mb-4">
-                <Icon className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="font-bold text-black text-base mb-2">{title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-        <div className="not-prose my-8">
-          <img src={labImg} alt="Science laboratory" className="w-full h-64 object-cover rounded-2xl shadow-md" />
-          <p className="text-center text-slate-500 text-sm mt-3">Primary Science Laboratory</p>
-        </div>
+
+        <PrimaryLabSlideshow />
       </div>
     ),
   },
@@ -301,7 +355,7 @@ const sections: Record<string, {
         </p>
         <h2>Sports Offered</h2>
         <div className="not-prose grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
-          {["Football", "Netball", "Athletics", "Swimming", "Cricket", "Tennis", "Basketball", "Chess", "Cross Country"].map(sport => (
+          {["Football", "Netball", "Athletics", "Swimming", "Cricket"].map(sport => (
             <div key={sport} className="flex items-center gap-2 bg-slate-50 rounded-xl px-4 py-3">
               <ChevronRight className="w-4 h-4 text-[#0c2865] flex-shrink-0" />
               <span className="text-sm font-medium text-black">{sport}</span>
@@ -370,14 +424,7 @@ const PrimaryPage = () => {
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0c2865]/70 via-[#0c2865]/50 to-[#0c2865]/80" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-block mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/70 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full"
-          >
-            Martin House · Primary School
-          </motion.span>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

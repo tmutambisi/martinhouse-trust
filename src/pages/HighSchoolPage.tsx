@@ -103,19 +103,7 @@ const sections: Record<string, {
             </div>
           ))}
         </div>
-        <h2>Key Information</h2>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-          {[
-            { label: "Curriculum", value: "Cambridge (Checkpoint, IGCSE, AS & A Level)" },
-            { label: "Faculty", value: "Expert, passionate subject specialists committed to excellence" },
-            { label: "Support", value: "Personalised learning through close collaboration with the Learning Support department" },
-          ].map(({ label, value }) => (
-            <div key={label} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
-              <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 text-left">{label}</p>
-              <p className="text-sm font-bold text-[#0c2865] text-left">{value}</p>
-            </div>
-          ))}
-        </div>
+
         <h2>AS &amp; A Level Subjects</h2>
         <div className="not-prose grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
           {[
@@ -143,24 +131,25 @@ const sections: Record<string, {
         <p>
           Students take three compulsory subjects: <strong>Mathematics</strong>, <strong>English Language</strong>, and <strong>English Literature</strong>. In addition, each student selects one subject from each of Groups A–E (five choice subjects), for a total of eight IGCSE subjects. At least one choice must be a science: Biology, Chemistry or Physics.
         </p>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 my-6">
           {[
-            { group: "Group A", items: ["Biology", "Chemistry", "Physics"] },
-            { group: "Group B", items: ["Additional Mathematics", "French", "Design & Technology"] },
-            { group: "Group C", items: ["Physical Education", "Business Studies", "ICT"] },
-            { group: "Group D", items: ["Computer Science", "Art & Design"] },
-            { group: "Group E", items: ["History", "Geography"] },
-          ].map(({ group, items }) => (
-            <div key={group} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
-              <h3 className="font-bold text-[#0c2865] text-xs mb-3 pb-2 border-b border-slate-200 uppercase tracking-widest">{group}</h3>
-              <ul className="space-y-2">
-                {items.map(item => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-slate-700">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#0c2865] flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            "Biology",
+            "Chemistry",
+            "Physics",
+            "Additional Mathematics",
+            "French",
+            "Design & Technology",
+            "Physical Education",
+            "Business Studies",
+            "ICT",
+            "Computer Science",
+            "Art & Design",
+            "History",
+            "Geography",
+          ].map((subject) => (
+            <div key={subject} className="flex items-center gap-2 bg-slate-50 rounded-2xl px-4 py-3 text-sm text-slate-700 border border-slate-100">
+              <ChevronRight className="w-3.5 h-3.5 text-[#0c2865] flex-shrink-0" />
+              <span>{subject}</span>
             </div>
           ))}
         </div>
@@ -198,17 +187,19 @@ const sections: Record<string, {
         <p>
           Pastoral Care is delivered through daily interactions and structured programmes that promote wellbeing and personal growth:
         </p>
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-          {[
-            { title: "Tutor Time", desc: "Personalised guidance, monitoring progress and supporting wellbeing" },
-            { title: "Assemblies", desc: "Celebrating achievement and reinforcing values" },
-            { title: "Chapel Services", desc: "Encouraging reflection, integrity and spiritual growth" },
-          ].map(({ title, desc }) => (
-            <div key={title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
-              <p className="font-bold text-[#0c2865] text-sm mb-2">{title}</p>
-              <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
+        <div className="not-prose my-6 overflow-hidden rounded-2xl shadow-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-3">
+            {[
+              { title: "Tutor Time", desc: "Personalised guidance, monitoring progress and supporting wellbeing" },
+              { title: "Assemblies", desc: "Celebrating achievement and reinforcing values" },
+              { title: "Chapel Services", desc: "Encouraging reflection, integrity and spiritual growth" },
+            ].map(({ title, desc }, index) => (
+              <div key={title} className={`bg-[#0c2865] p-6 ${index > 0 ? "border-t border-white/10 sm:border-t-0 sm:border-l sm:border-white/10" : ""}`}>
+                <p className="font-bold text-white text-sm mb-2">{title}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
         <p>
           Through this holistic approach, we nurture confident, respectful and compassionate individuals ready to thrive both within the school and beyond.
@@ -349,7 +340,7 @@ const sections: Record<string, {
         </p>
         <h2>Sports Offered</h2>
         <div className="not-prose grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
-          {["Cricket", "Football", "Netball", "Basketball", "Athletics", "Swimming", "Tennis", "Chess", "Rugby", "Volleyball", "Cross Country", "Badminton"].map(sport => (
+          {["Cricket", "Football", "Netball", "Athletics", "Swimming", "Rugby", "Volleyball"].map(sport => (
             <div key={sport} className="flex items-center gap-2 bg-slate-50 rounded-xl px-4 py-3">
               <ChevronRight className="w-4 h-4 text-[#0c2865] flex-shrink-0" />
               <span className="text-sm font-medium text-black">{sport}</span>
@@ -410,14 +401,7 @@ const HighSchoolPage = () => {
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0c2865]/70 via-[#0c2865]/50 to-[#0c2865]/80" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-block mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/70 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full"
-          >
-            Martin House · High School
-          </motion.span>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

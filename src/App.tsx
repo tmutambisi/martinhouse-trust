@@ -16,7 +16,6 @@ import Preloader from "./components/Preloader";
 // Lazy load non-critical pages for better performance
 const PaymentsPage = lazy(() => import("./pages/PaymentsPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
-const QuotePage = lazy(() => import("./pages/QuotePage"));
 const FeedbackPage = lazy(() => import("./pages/FeedbackPage"));
 const FAQPage = lazy(() => import("./pages/FAQPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
@@ -69,7 +68,6 @@ const router = createBrowserRouter(
         { path: "/services", element: <ServicesPage /> },
         { path: "/payments", element: <PaymentsPage /> },
         { path: "/contact", element: <ContactPage /> },
-        { path: "/quote", element: <QuotePage /> },
         { path: "/feedback", element: <FeedbackPage /> },
         { path: "/faq", element: <FAQPage /> },
         { path: "/about/:section", element: <AboutPage /> },
