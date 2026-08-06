@@ -12,7 +12,7 @@ const reasons = [
   {
     icon: BadgeCheck,
     title: "Prep, Primary & College",
-    description: "A complete pathway from early years through Cambridge A Levels on one beautiful campus."
+    description: "A complete pathway from early years through to Cambridge A Levels on one beautiful campus."
   },
   {
     icon: BookOpen,

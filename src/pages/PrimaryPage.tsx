@@ -145,7 +145,7 @@ const sections: Record<string, {
         <h2>Pastoral Care</h2>
         <p>
           Pastoral care is woven into every aspect of school life. Class teachers
-          build close relationships with their pupils, and our counselling team is
+          build close relationships with their pupils, and our safeguarding team is
           always on hand to offer support. Weekly assemblies and house meetings create
           a strong sense of belonging and community.
         </p>
