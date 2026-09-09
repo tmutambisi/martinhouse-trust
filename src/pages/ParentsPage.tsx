@@ -270,49 +270,104 @@ export const ParentsPage = () => {
     },
     "calendars": {
       title: "Term Dates & Calendars",
-      subtitle: "Keep up-to-date with current term schedules and key academic dates.",
+      subtitle: "Keep up-to-date with current term schedules, key academic dates, and sports fixtures.",
       icon: Calendar,
       content: (
-        <div className="space-y-8">
+        <div className="space-y-10">
           <div className="prose max-w-none text-slate-600">
             <p className="text-lg leading-relaxed font-medium text-slate-800">
-              Martin House operations follow a standard three-term calendar. Term dates are planned in advance to facilitate family arrangements.
+              Martin House operations follow a standard three-term calendar for both Prep School and College. Term dates and sporting fixtures are planned in advance to facilitate family arrangements and international travel.
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden max-w-2xl">
-            <div className="bg-primary text-white px-8 py-5">
-              <h3 className="text-lg font-heading font-bold uppercase tracking-wider">Academic Year Term Dates</h3>
-            </div>
-            <div className="p-6 md:p-8 space-y-6">
-              <div className="flex items-center justify-between border-b pb-4">
-                <div>
-                  <h4 className="font-bold text-slate-800">Term 1</h4>
-                  <p className="text-xs text-slate-400">Late Summer / Autumn</p>
-                </div>
-                <div className="text-right">
-                  <span className="px-3 py-1.5 bg-[#0c2865]/5 text-primary text-xs font-bold uppercase tracking-wider rounded-lg">Jan 13 - Apr 09</span>
-                </div>
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
+              <div className="bg-[#0c2865] text-white px-6 py-4 flex items-center justify-between">
+                <h3 className="text-base font-heading font-bold uppercase tracking-wider">Term 1 (Easter)</h3>
+                <span className="px-2 py-0.5 rounded-full bg-emerald-500 text-white text-[9px] font-black uppercase">Active</span>
               </div>
-              <div className="flex items-center justify-between border-b pb-4">
+              <div className="p-6 space-y-4 text-xs">
+                <div className="flex justify-between border-b pb-2">
+                  <span className="text-slate-400">Duration:</span>
+                  <span className="font-bold text-slate-800">13 Jan – 09 Apr 2026</span>
+                </div>
+                <div className="flex justify-between border-b pb-2">
+                  <span className="text-slate-400">Half-Term:</span>
+                  <span className="font-bold text-[#0c2865]">20 Feb – 23 Feb 2026</span>
+                </div>
                 <div>
-                  <h4 className="font-bold text-slate-800">Term 2</h4>
-                  <p className="text-xs text-slate-400">Winter Term</p>
-                </div>
-                <div className="text-right">
-                  <span className="px-3 py-1.5 bg-[#0c2865]/5 text-primary text-xs font-bold uppercase tracking-wider rounded-lg">May 05 - Aug 06</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="font-bold text-slate-800">Term 3</h4>
-                  <p className="text-xs text-slate-400">Spring / Early Summer</p>
-                </div>
-                <div className="text-right">
-                  <span className="px-3 py-1.5 bg-[#0c2865]/5 text-primary text-xs font-bold uppercase tracking-wider rounded-lg">Sep 08 - Dec 03</span>
+                  <span className="text-slate-400 font-bold uppercase tracking-wider block mb-1">Key Milestones:</span>
+                  <p className="text-slate-600 leading-relaxed">• Inter-House Athletics Championship<br />• Cambridge Checkpoint Seminars<br />• ISAZ Prep Rugby & Girls' Netball</p>
                 </div>
               </div>
             </div>
+
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
+              <div className="bg-[#0c2865] text-white px-6 py-4 flex items-center justify-between">
+                <h3 className="text-base font-heading font-bold uppercase tracking-wider">Term 2 (Trinity)</h3>
+                <span className="px-2 py-0.5 rounded-full bg-[#e8b84b] text-slate-900 text-[9px] font-black uppercase">Upcoming</span>
+              </div>
+              <div className="p-6 space-y-4 text-xs">
+                <div className="flex justify-between border-b pb-2">
+                  <span className="text-slate-400">Duration:</span>
+                  <span className="font-bold text-slate-800">05 May – 06 Aug 2026</span>
+                </div>
+                <div className="flex justify-between border-b pb-2">
+                  <span className="text-slate-400">Half-Term:</span>
+                  <span className="font-bold text-[#0c2865]">19 Jun – 22 Jun 2026</span>
+                </div>
+                <div>
+                  <span className="text-slate-400 font-bold uppercase tracking-wider block mb-1">Key Milestones:</span>
+                  <p className="text-slate-600 leading-relaxed">• Mid-Year Formative Assessments<br />• College Rugby & Girls' Netball Derby<br />• Kalundu Farm Ecology Excursions</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
+              <div className="bg-[#0c2865] text-white px-6 py-4 flex items-center justify-between">
+                <h3 className="text-base font-heading font-bold uppercase tracking-wider">Term 3 (Michaelmas)</h3>
+                <span className="px-2 py-0.5 rounded-full bg-slate-200 text-slate-600 text-[9px] font-black uppercase">Scheduled</span>
+              </div>
+              <div className="p-6 space-y-4 text-xs">
+                <div className="flex justify-between border-b pb-2">
+                  <span className="text-slate-400">Duration:</span>
+                  <span className="font-bold text-slate-800">08 Sep – 03 Dec 2026</span>
+                </div>
+                <div className="flex justify-between border-b pb-2">
+                  <span className="text-slate-400">Half-Term:</span>
+                  <span className="font-bold text-[#0c2865]">16 Oct – 19 Oct 2026</span>
+                </div>
+                <div>
+                  <span className="text-slate-400 font-bold uppercase tracking-wider block mb-1">Key Milestones:</span>
+                  <p className="text-slate-600 leading-relaxed">• Cambridge IGCSE & A-Level Finals<br />• Prep Musical Production<br />• Annual Speech Day & Prize Giving</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-1 text-center md:text-left">
+              <h4 className="font-heading font-bold text-slate-900 text-base">
+                Download Official Term Dates & Fixtures PDF
+              </h4>
+              <p className="text-xs text-slate-500">
+                Official Martin House academic schedule for the 2026 academic year.
+              </p>
+            </div>
+            <a
+              href="#calendars-section"
+              onClick={() => {
+                const blob = new Blob([`MARTIN HOUSE TRUST SCHOOL 2026 CALENDAR\n\nTerm 1: 13 Jan - 09 Apr 2026 (Half-Term: 20-23 Feb)\nTerm 2: 05 May - 06 Aug 2026 (Half-Term: 19-22 Jun)\nTerm 3: 08 Sep - 03 Dec 2026 (Half-Term: 16-19 Oct)\n\nProgrammes: Prep and College\nCampus: Kalundu Farm, Chisamba, Zambia`], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "Martin-House-2026-Term-Dates.txt";
+                a.click();
+              }}
+              className="px-5 py-2.5 bg-[#0c2865] hover:bg-[#12398c] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors flex items-center gap-2 shadow-md cursor-pointer"
+            >
+              <Download className="w-4 h-4" /> Download 2026 Calendar
+            </a>
           </div>
         </div>
       ),

@@ -11,7 +11,7 @@ import { motion, useReducedMotion, Variants } from "framer-motion";
 const reasons = [
   {
     icon: BadgeCheck,
-    title: "Prep, Primary & College",
+    title: "Prep & College",
     description: "A complete pathway from early years through to Cambridge A Levels on one beautiful campus."
   },
   {
@@ -99,8 +99,8 @@ const WhyChooseUsSection = () => {
                   The Martin House Advantage
                 </motion.span>
                 <h2 className="text-4xl md:text-5xl lg:text-7xl font-heading font-extrabold text-white leading-[1.05] tracking-tight">
-                  Why families <br />
-                  <span className="text-secondary italic">choose us</span>
+                  Why Families <br />
+                  <span className="text-secondary italic">Choose Martin House</span>
                 </h2>
               </div>
 

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Menu, ChevronDown, X } from "lucide-react";
+import { Menu, ChevronDown, X, Lock } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useSpring, useReducedMotion } from "framer-motion";
 import schoolLogo from "@/assets/martin-house-logo.png";
+import ParentPortalModal from "./ParentPortalModal";
 
 interface NavChild {
   href: string;
@@ -16,7 +17,7 @@ interface NavItem {
 }
 
 // Flat navigation items matching user's specific request:
-// Links: Home | About Us | Admissions | Prep | College | Parents | Contact Us
+// Links: Home | About Us | Admissions | Prep | College | Parents | Calendars | Contact Us
 const navItems: NavItem[] = [
   { href: "/", label: "Home" },
   {
@@ -39,23 +40,23 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    href: "/primary",
+    href: "/prep",
     label: "Prep",
     children: [
-      { href: "/primary/about", label: "About Prep" },
-      { href: "/primary/academics", label: "Academics" },
-      { href: "/primary/culture", label: "Culture" },
-      { href: "/primary/sport", label: "Sport" },
+      { href: "/prep/about", label: "About Prep" },
+      { href: "/prep/academics", label: "Academics" },
+      { href: "/prep/culture", label: "Culture" },
+      { href: "/prep/sport", label: "Sport" },
     ],
   },
   {
-    href: "/highschool",
+    href: "/college",
     label: "College",
     children: [
-      { href: "/highschool/about", label: "About College" },
-      { href: "/highschool/academics", label: "Academics" },
-      { href: "/highschool/culture", label: "Culture" },
-      { href: "/highschool/sport", label: "Sport" },
+      { href: "/college/about", label: "About College" },
+      { href: "/college/academics", label: "Academics" },
+      { href: "/college/culture", label: "Culture" },
+      { href: "/college/sport", label: "Sport" },
     ],
   },
   {
@@ -65,15 +66,17 @@ const navItems: NavItem[] = [
       { href: "/parents/the-board", label: "The Board" },
       { href: "/parents/uniform-requirements", label: "Uniform Requirements" },
       { href: "/parents/boarding-requirements", label: "Boarding Requirements" },
-      { href: "/parents/calendars", label: "Calendars" },
+      { href: "/parents/calendars", label: "Calendars & Dates" },
       { href: "/parents/newsletters-and-publications", label: "Newsletters & Publications" },
     ],
   },
+  { href: "/parents/calendars", label: "Calendars" },
   { href: "/contact", label: "Contact Us" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPortalOpen, setIsPortalOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
   const prefersReducedMotion = useReducedMotion();
@@ -119,8 +122,8 @@ export const Navbar = () => {
       location.pathname === item.href ||
       (item.href !== "/" && location.pathname.startsWith(item.href)) ||
       (item.label === "About Us" && location.pathname.startsWith("/about")) ||
-      (item.label === "Prep" && location.pathname.startsWith("/primary")) ||
-      (item.label === "College" && location.pathname.startsWith("/highschool"));
+      (item.label === "Prep" && (location.pathname.startsWith("/prep") || location.pathname.startsWith("/primary"))) ||
+      (item.label === "College" && (location.pathname.startsWith("/college") || location.pathname.startsWith("/highschool")));
 
     return (
       <div
@@ -204,21 +207,41 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          {/* Right: Full-width Links */}
-          <div className="hidden lg:flex items-center h-full">
+          {/* Right: Full-width Links & Parent Portal CTA */}
+          <div className="hidden lg:flex items-center h-full gap-2">
             {navItems.map((item) => (
               <NavLink key={item.label} item={item} />
             ))}
+
+            {/* Parent Portal CTA Button */}
+            <button
+              onClick={() => setIsPortalOpen(true)}
+              className="ml-2 flex items-center gap-2 px-4 py-2 bg-[#0c2865] hover:bg-[#113585] text-[#e8b84b] border border-[#e8b84b]/40 rounded-xl font-heading font-black text-[11px] uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02]"
+            >
+              <Lock className="w-3.5 h-3.5 text-[#e8b84b]" />
+              <span>Parent Portal</span>
+            </button>
           </div>
 
-          {/* Mobile menu trigger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile menu trigger & portal quick action */}
+          <div className="lg:hidden flex items-center gap-2">
+            <button
+              onClick={() => setIsPortalOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0c2865] text-[#e8b84b] rounded-lg text-[10px] font-heading font-black uppercase tracking-wider shadow-sm"
+              aria-label="Open Parent Portal"
+            >
+              <Lock className="w-3 h-3" />
+              <span>Portal</span>
+            </button>
+
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu overlay */}
@@ -246,6 +269,18 @@ export const Navbar = () => {
                   aria-label="Close menu"
                 >
                   <X className="h-5 w-5" />
+                </button>
+
+                {/* Mobile Parent Portal button */}
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsPortalOpen(true);
+                  }}
+                  className="w-full mb-4 py-3 px-4 bg-[#0c2865] text-[#e8b84b] font-heading font-black text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-md"
+                >
+                  <Lock className="w-4 h-4" />
+                  Parent Portal Access
                 </button>
 
                 <div className="flex flex-col gap-4 overflow-y-auto h-full pb-10 no-scrollbar">
@@ -301,6 +336,12 @@ export const Navbar = () => {
           )}
         </AnimatePresence>
       </header>
+
+      {/* Parent Portal Gateway Modal */}
+      <ParentPortalModal
+        isOpen={isPortalOpen}
+        onClose={() => setIsPortalOpen(false)}
+      />
     </>
   );
 };

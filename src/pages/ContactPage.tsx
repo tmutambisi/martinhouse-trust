@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import heroImage from "@/assets/secondary-school/school/bio1.jpg";
+import heroImage from "@/assets/navbar.jpg";
 import { motion } from "framer-motion";
 
 const contacts = [

@@ -16,9 +16,9 @@ const stats = [
   },
   {
     id: 2,
-    number: 3,
+    number: 2,
     suffix: "",
-    title: "Prep, Primary & College",
+    title: "Prep & College",
     bgColor: "bg-secondary",
     textColor: "text-secondary-foreground",
     pattern: "pattern-2",

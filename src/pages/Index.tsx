@@ -5,6 +5,7 @@ import SchoolDivisionsBar from "@/components/SchoolDivisionsBar";
 import AccreditationBar from "@/components/AccreditationBar";
 
 // Lazy load below-the-fold sections for faster initial load
+const CalendarSection = lazy(() => import("@/components/CalendarSection"));
 const WhyChooseUsSection = lazy(() => import("@/components/WhyChooseUsSection"));
 const NewsSection = lazy(() => import("@/components/NewsSection"));
 const ImageSlideshowSection = lazy(() => import("@/components/ImageSlideshowSection"));
@@ -34,6 +35,8 @@ const Index = () => {
 
         {/* Single Suspense wrapping all lazy sections */}
         <Suspense fallback={sectionLoader()}>
+          {/* Calendars & Term Dates Section */}
+          <CalendarSection />
           <WhyChooseUsSection />
           <NewsSection />
           {/* Action Image Slideshow */}

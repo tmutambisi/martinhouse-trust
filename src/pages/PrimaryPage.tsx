@@ -103,17 +103,17 @@ const sections: Record<string, {
   content: React.ReactNode;
 }> = {
   about: {
-    title: "About Primary School",
+    title: "About Prep School",
     subtitle: "Nurturing curious, confident, and compassionate young learners.",
     heroImage: prepIngarden,
     content: (
       <div className="prose-premium max-w-none">
-        <h2>Our Primary School</h2>
+        <h2>Our Prep School</h2>
         <p>
-          Martin House Primary School provides a structured, caring environment where
+          Martin House Prep School provides a structured, caring environment where
           children in Grades 1 to 7 are given the tools to excel academically and grow
           as individuals. Set on 80 hectares of indigenous vegetation at Kalundu Farm,
-          Chisamba, the Primary School campus offers expansive space for learning both
+          Chisamba, the Prep School campus offers expansive space for learning both
           inside and outside the classroom.
         </p>
         <p>
@@ -127,14 +127,14 @@ const sections: Record<string, {
             <img
               key={i}
               src={src}
-              alt={`Primary school life ${i + 1}`}
+              alt={`Prep school life ${i + 1}`}
               className="w-full h-64 object-cover rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300"
             />
           ))}
         </div>
         <h2>Our Ethos</h2>
         <p>
-          At the heart of the Martin House Primary School is the conviction that
+          At the heart of the Martin House Prep School is the conviction that
           character and academics are inseparable. Our learners are taught to value
           integrity, responsibility, respect, and community—qualities that will serve
           them well beyond the classroom.
@@ -153,7 +153,7 @@ const sections: Record<string, {
     ),
   },
   academics: {
-    title: "Primary Academics",
+    title: "Prep Academics",
     subtitle: "Inspiring curiosity and a lifelong love of learning through the Cambridge curriculum.",
     heroImage: prepSoftskills,
     content: (
@@ -174,15 +174,15 @@ const sections: Record<string, {
     ),
   },
   culture: {
-    title: "Primary Culture",
+    title: "Prep Culture",
     subtitle: "Celebrating heritage, creativity, and community.",
     heroImage: prepCulture,
     content: (
       <div className="prose-premium max-w-none">
         <h2>A Rich Cultural Life</h2>
         <p>
-          Culture is central to life at Martin House Primary. From our vibrant speech
-          and drama festivals to Shona heritage days, we create opportunities for every
+          Culture is central to life at Martin House Prep. From our vibrant speech
+          and drama festivals to heritage days, we create opportunities for every
           child to discover and celebrate their identity.
         </p>
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -341,12 +341,12 @@ const sections: Record<string, {
     ),
   },
   sport: {
-    title: "Primary Sport",
+    title: "Prep Sport",
     subtitle: "Building teamwork, discipline, and a love of healthy living.",
     heroImage: prepRunning,
     content: (
       <div className="prose-premium max-w-none">
-        <h2>Sport at Martin House Primary</h2>
+        <h2>Sport at Martin House Prep</h2>
         <p>
           Physical education is compulsory for all pupils in Grades 1–7. Beyond
           the curriculum, Martin House offers a comprehensive co-curricular sports

@@ -4,12 +4,7 @@ const pathways = [
   {
     title: "Prep School",
     description:
-      "Cambridge Curriculum from Early Years through Year 7, with small classes and a strong foundation in literacy, numeracy, and character.",
-  },
-  {
-    title: "Primary School",
-    description:
-      "Continuous assessment through projects, class activities, tests, and examinations that prepare learners for confident progression.",
+      "Cambridge Primary Curriculum from Early Years through Year 7, with continuous assessment and small classes that nurture curiosity and character.",
   },
   {
     title: "College — Cambridge",

@@ -29,12 +29,12 @@ const sections: Record<string, {
   content: React.ReactNode;
 }> = {
   about: {
-    title: "About High School",
+    title: "About College",
     subtitle: "Shaping scholars, leaders, and responsible citizens for tomorrow.",
-    heroImage: highxl,
+    heroImage: highSports,
     content: (
       <div className="prose-premium max-w-none">
-        <h2>Our High School</h2>
+        <h2>Our College</h2>
         <p>
           Martin House College caters for Forms 1 to 6, offering the Cambridge International
           programmes — Cambridge Checkpoint, IGCSE, and AS &amp; A Level. Students benefit from
@@ -42,7 +42,7 @@ const sections: Record<string, {
         </p>
         <p>
           The College campus shares the tranquil 80-hectare Kalundu Farm setting with
-          the Prep School, giving High School students access to outstanding facilities
+          the Prep School, giving College students access to outstanding facilities
           including science laboratories, a library resource centre, computer labs,
           sports fields, and boarding houses.
         </p>
@@ -280,7 +280,7 @@ const sections: Record<string, {
     ),
   },
   culture: {
-    title: "High School Culture",
+    title: "College Culture",
     subtitle: "Excellence in arts, music, drama, and community engagement.",
     heroImage: highxlArts,
     content: (
@@ -327,7 +327,7 @@ const sections: Record<string, {
     ),
   },
   sport: {
-    title: "High School Sport",
+    title: "College Sport",
     subtitle: "Competitive sport that builds character, teamwork, and discipline.",
     heroImage: highSports,
     content: (

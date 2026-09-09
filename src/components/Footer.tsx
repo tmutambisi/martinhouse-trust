@@ -96,7 +96,7 @@ const Footer = () => {
               About Our School
             </h3>
             <p className="text-white/80 text-xs md:text-sm leading-relaxed max-w-sm font-medium">
-              Our day and boarding school on Kalundu Farm, Chisamba, offers Prep, Primary, and College programmes with a Christian ethos and a love for the natural world.
+              Our day and boarding school on Kalundu Farm, Chisamba, offers Prep and College programmes with a Christian ethos and a love for the natural world.
             </p>
           </motion.div>
 

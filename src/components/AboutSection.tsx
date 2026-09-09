@@ -22,8 +22,14 @@ const AboutSection = () => {
             whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="space-y-8 relative"
+            className="space-y-8 relative pl-12 md:pl-24"
           >
+            {/* Vertical text */}
+            <div className="absolute left-0 top-0 h-full w-12 flex items-start justify-center">
+              <h2 className="origin-top-left -rotate-90 text-[clamp(4rem,7vw,6.5rem)] font-heading font-black tracking-widest text-transparent uppercase opacity-20 pointer-events-none whitespace-nowrap translate-y-[220px]" style={{ WebkitTextStroke: '2px #0f172a' }}>
+                About Us
+              </h2>
+            </div>
 
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground mb-8">
@@ -33,7 +39,7 @@ const AboutSection = () => {
 
             <div className="space-y-6">
               <p className="text-[15px] text-foreground font-medium leading-relaxed font-body">
-                Martin House Trust School is a day and boarding school on Kalundu Farm, Chisamba, near Lusaka. Surrounded by 80 hectares of indigenous vegetation, we offer Prep, Primary, and College programmes with a Christian ethos.
+                Martin House Trust School is a day and boarding school on Kalundu Farm, Chisamba, near Lusaka. Surrounded by 80 hectares of indigenous vegetation, we offer Prep and College programmes with a Christian ethos.
               </p>
               <p className="text-[15px] text-foreground leading-relaxed font-body">
                 We aim to develop academically and emotionally prepared young people who respect their natural environment, play for the love of the game, and give generously to their community.
@@ -85,7 +91,7 @@ const AboutSection = () => {
               <div className="aspect-square bg-primary rounded-2xl p-10 flex flex-col justify-between text-white shadow-2xl transition-all duration-300 group hover:bg-secondary">
                 <Trophy className="w-8 h-8 text-secondary group-hover:text-white transition-colors" />
                 <div>
-                   <h3 className="card-heading font-bold tracking-tight leading-none mb-4">Cambridge Curriculum</h3>
+                  <h3 className="card-heading font-bold tracking-tight leading-none mb-4">Cambridge Curriculum</h3>
                   <p className="text-[11px] font-bold tracking-wider opacity-60 group-hover:opacity-100 uppercase">Prep & College</p>
                 </div>
               </div>

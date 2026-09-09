@@ -23,9 +23,9 @@ const slides: SlideItem[] = [
 
   {
     src: sport1,
-    alt: "Martin House Primary Rugby Team",
+    alt: "Martin House Prep Rugby Team",
     title: "Nurturing Sportsmanship & Team Spirit",
-    tag: "Primary Rugby Team",
+    tag: "Prep Rugby Team",
   },
   {
     src: girlsFootball,
@@ -41,9 +41,9 @@ const slides: SlideItem[] = [
   },
   {
     src: cricket,
-    alt: "High School Cricket Match",
+    alt: "College Cricket Match",
     title: "Precision, Discipline, and Teamwork",
-    tag: "High School Cricket",
+    tag: "College Cricket",
   },
   {
     src: running,
@@ -59,9 +59,9 @@ const slides: SlideItem[] = [
   },
   {
     src: netball,
-    alt: "Girls Netball Programme",
+    alt: "Girls' Netball Programme",
     title: "Cooperative Play, Focused Skill",
-    tag: "Girls Netball",
+    tag: "Girls' Netball",
   },
 ];
 

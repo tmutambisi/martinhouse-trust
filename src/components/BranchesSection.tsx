@@ -241,7 +241,7 @@ const BranchesSection = () => {
 
                 <div className="relative z-10">
                   <p className="text-[9px] font-bold tracking-widest text-white/30 leading-relaxed italic mt-12">
-                    Martin High School <br />
+                    Martin House College <br />
                     Deployment asset #{selectedBranch.id}
                   </p>
                 </div>
