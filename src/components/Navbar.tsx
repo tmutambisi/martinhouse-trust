@@ -134,7 +134,7 @@ export const Navbar = () => {
         <Link
           to={item.href}
           onClick={item.label === "Home" ? handleHomeClick : () => setIsOpen(false)}
-          className={`h-full flex items-center px-6 transition-all duration-200 font-heading text-[12px] uppercase tracking-wider font-extrabold relative z-10 ${
+          className={`h-full flex items-center px-4 transition-all duration-200 font-heading text-[11px] uppercase tracking-wide font-extrabold relative z-10 whitespace-nowrap ${
             isActive
               ? "bg-[#0c2865] text-white"
               : "text-slate-700 bg-white hover:bg-[#0c2865] hover:text-white"
@@ -142,7 +142,7 @@ export const Navbar = () => {
         >
           <span>{item.label}</span>
           {item.children && (
-            <ChevronDown className="h-3.5 w-3.5 ml-1.5 shrink-0" />
+            <ChevronDown className="h-3 w-3 ml-1 shrink-0" />
           )}
         </Link>
 
@@ -207,33 +207,24 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          {/* Right: Full-width Links & Parent Portal CTA */}
-          <div className="hidden lg:flex items-center h-full gap-2">
+          {/* Right: Full-width Links */}
+          <div className="hidden lg:flex items-center h-full">
             {navItems.map((item) => (
               <NavLink key={item.label} item={item} />
             ))}
 
-            {/* Parent Portal CTA Button */}
-            <button
+            {/* Parent Portal CTA Button — temporarily disabled */}
+            {/* <button
               onClick={() => setIsPortalOpen(true)}
-              className="ml-2 flex items-center gap-2 px-4 py-2 bg-[#0c2865] hover:bg-[#113585] text-[#e8b84b] border border-[#e8b84b]/40 rounded-xl font-heading font-black text-[11px] uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02]"
+              className="ml-2 flex items-center gap-2 px-4 py-2 bg-[#0c2865] hover:bg-[#113585] text-white border border-white/30 rounded-xl font-heading font-black text-[11px] uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02]"
             >
-              <Lock className="w-3.5 h-3.5 text-[#e8b84b]" />
+              <Lock className="w-3.5 h-3.5 text-white" />
               <span>Parent Portal</span>
-            </button>
+            </button> */}
           </div>
 
-          {/* Mobile menu trigger & portal quick action */}
-          <div className="lg:hidden flex items-center gap-2">
-            <button
-              onClick={() => setIsPortalOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0c2865] text-[#e8b84b] rounded-lg text-[10px] font-heading font-black uppercase tracking-wider shadow-sm"
-              aria-label="Open Parent Portal"
-            >
-              <Lock className="w-3 h-3" />
-              <span>Portal</span>
-            </button>
-
+          {/* Mobile menu trigger */}
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
@@ -271,17 +262,7 @@ export const Navbar = () => {
                   <X className="h-5 w-5" />
                 </button>
 
-                {/* Mobile Parent Portal button */}
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    setIsPortalOpen(true);
-                  }}
-                  className="w-full mb-4 py-3 px-4 bg-[#0c2865] text-[#e8b84b] font-heading font-black text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-md"
-                >
-                  <Lock className="w-4 h-4" />
-                  Parent Portal Access
-                </button>
+                {/* Mobile Parent Portal button — temporarily disabled */}
 
                 <div className="flex flex-col gap-4 overflow-y-auto h-full pb-10 no-scrollbar">
                   {navItems.map((item, idx) => {

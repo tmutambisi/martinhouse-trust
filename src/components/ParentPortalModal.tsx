@@ -110,8 +110,8 @@ export const ParentPortalModal: React.FC<ParentPortalModalProps> = ({ isOpen, on
               <X className="w-5 h-5" />
             </button>
 
-            <div className="flex items-center gap-2.5 text-[#e8b84b] text-xs font-black uppercase tracking-widest mb-2">
-              <ShieldCheck className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-white/90 text-xs font-black uppercase tracking-widest mb-2">
+              <ShieldCheck className="w-4 h-4 text-white" />
               <span>Official Parent Gateway</span>
             </div>
 
@@ -128,7 +128,7 @@ export const ParentPortalModal: React.FC<ParentPortalModalProps> = ({ isOpen, on
                 onClick={() => setActiveTab("quick-links")}
                 className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                   activeTab === "quick-links"
-                    ? "bg-secondary text-secondary-foreground shadow-md"
+                    ? "bg-white text-[#0c2865] shadow-md"
                     : "bg-white/10 hover:bg-white/20 text-white"
                 }`}
               >
@@ -138,7 +138,7 @@ export const ParentPortalModal: React.FC<ParentPortalModalProps> = ({ isOpen, on
                 onClick={() => setActiveTab("login")}
                 className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                   activeTab === "login"
-                    ? "bg-secondary text-secondary-foreground shadow-md"
+                    ? "bg-white text-[#0c2865] shadow-md"
                     : "bg-white/10 hover:bg-white/20 text-white"
                 }`}
               >
@@ -155,7 +155,7 @@ export const ParentPortalModal: React.FC<ParentPortalModalProps> = ({ isOpen, on
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Frequently Accessed by Parents:
                   </span>
-                  <span className="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  <span className="text-[11px] font-bold text-[#0c2865] bg-[#0c2865]/10 px-2.5 py-0.5 rounded-full border border-[#0c2865]/20">
                     ● Term 1 Active
                   </span>
                 </div>

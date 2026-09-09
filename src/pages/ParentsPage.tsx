@@ -37,24 +37,24 @@ export const ParentsPage = () => {
           <div className="grid md:grid-cols-2 gap-8 pt-6">
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl space-y-4">
               <h3 className="text-xl font-heading font-bold text-primary flex items-center gap-3">
-                <ShieldCheck className="h-6 w-6 text-secondary" />
+                <ShieldCheck className="h-6 w-6 text-[#0c2865]" />
                 Key Responsibilities
               </h3>
               <ul className="space-y-3 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <span>Formulating and monitoring long-term strategic plans and school development policies.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <span>Ensuring financial solvency, approving budgets, and overseeing major capital investments.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <span>Upholding the Christian ethos, founding values, and mission of the school.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <span>Appointing and supporting the School Principal and senior administration.</span>
                 </li>
               </ul>
@@ -62,24 +62,24 @@ export const ParentsPage = () => {
 
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl space-y-4">
               <h3 className="text-xl font-heading font-bold text-primary flex items-center gap-3">
-                <BookOpen className="h-6 w-6 text-secondary" />
+                <BookOpen className="h-6 w-6 text-[#0c2865]" />
                 Standing Committees
               </h3>
               <ul className="space-y-3 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <div>
                     <strong className="text-slate-800">Finance & General Purpose:</strong> Oversees budgeting, fees, and resource allocation.
                   </div>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <div>
                     <strong className="text-slate-800">Education & Policy:</strong> Ensures curriculum excellence and alignment with international educational standards.
                   </div>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold mt-0.5">•</span>
+                  <span className="text-[#0c2865] font-bold mt-0.5">•</span>
                   <div>
                     <strong className="text-slate-800">Infrastructure & Maintenance:</strong> Monitors campus expansion, estate maintenance, and agricultural projects.
                   </div>
@@ -105,7 +105,7 @@ export const ParentsPage = () => {
               </div>
               <div className="divide-y divide-slate-100">
                 <div className="p-6 md:p-8 space-y-4">
-                  <h4 className="font-heading font-bold text-secondary uppercase text-sm tracking-widest">Girls' Summer Uniform</h4>
+                  <h4 className="font-heading font-bold text-[#0c2865] uppercase text-sm tracking-widest">Girls' Summer Uniform</h4>
                   <ul className="space-y-2 text-sm text-slate-600">
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Navy skort</span></li>
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Light blue shirt with school badge</span></li>
@@ -116,7 +116,7 @@ export const ParentsPage = () => {
                   </ul>
                 </div>
                 <div className="p-6 md:p-8 space-y-4">
-                  <h4 className="font-heading font-bold text-secondary uppercase text-sm tracking-widest">Girls' Winter Uniform</h4>
+                  <h4 className="font-heading font-bold text-[#0c2865] uppercase text-sm tracking-widest">Girls' Winter Uniform</h4>
                   <ul className="space-y-2 text-sm text-slate-600">
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Navy skort</span></li>
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Light blue shirt with school badge</span></li>
@@ -147,7 +147,7 @@ export const ParentsPage = () => {
               </div>
               <div className="divide-y divide-slate-100">
                 <div className="p-6 md:p-8 space-y-4">
-                  <h4 className="font-heading font-bold text-secondary uppercase text-sm tracking-widest">Boys' Summer Uniform</h4>
+                  <h4 className="font-heading font-bold text-[#0c2865] uppercase text-sm tracking-widest">Boys' Summer Uniform</h4>
                   <ul className="space-y-2 text-sm text-slate-600">
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Navy shorts with a zip (no PE shorts)</span></li>
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Light blue shirt with school badge</span></li>
@@ -158,7 +158,7 @@ export const ParentsPage = () => {
                   </ul>
                 </div>
                 <div className="p-6 md:p-8 space-y-4">
-                  <h4 className="font-heading font-bold text-secondary uppercase text-sm tracking-widest">Boys' Winter Uniform</h4>
+                  <h4 className="font-heading font-bold text-[#0c2865] uppercase text-sm tracking-widest">Boys' Winter Uniform</h4>
                   <ul className="space-y-2 text-sm text-slate-600">
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Navy shorts with a zip (no PE shorts)</span></li>
                     <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" /> <span>Light blue shirt with school badge</span></li>
@@ -187,11 +187,11 @@ export const ParentsPage = () => {
               <h4 className="font-heading font-bold text-slate-800 uppercase text-sm tracking-wider mb-4">School Tracksuit Policy</h4>
               <ul className="space-y-3 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold">•</span>
+                  <span className="text-[#0c2865] font-bold">•</span>
                   <span>Tracksuit pants may not be worn without the tracksuit jacket.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-secondary font-bold">•</span>
+                  <span className="text-[#0c2865] font-bold">•</span>
                   <span>School shoes must be worn with the formal tracksuit (running shoes are not permitted).</span>
                 </li>
               </ul>
@@ -305,7 +305,7 @@ export const ParentsPage = () => {
             <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
               <div className="bg-[#0c2865] text-white px-6 py-4 flex items-center justify-between">
                 <h3 className="text-base font-heading font-bold uppercase tracking-wider">Term 2 (Trinity)</h3>
-                <span className="px-2 py-0.5 rounded-full bg-[#e8b84b] text-slate-900 text-[9px] font-black uppercase">Upcoming</span>
+                <span className="px-2 py-0.5 rounded-full border border-white/40 bg-white/10 text-white text-[9px] font-black uppercase">Upcoming</span>
               </div>
               <div className="p-6 space-y-4 text-xs">
                 <div className="flex justify-between border-b pb-2">
@@ -393,7 +393,7 @@ export const ParentsPage = () => {
               { title: "Term 2 Academic Guide", desc: "Curriculum expectations, mid-term test schedule for prep and college students, and assessment criteria.", date: "May 2026" },
               { title: "Martin House Chronicle", desc: "Our annual publications compilation detailing creative writing awards, campus projects, and conservation highlights.", date: "December 2025" }
             ].map((pub, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-lg flex flex-col justify-between group hover:shadow-xl hover:border-secondary/20 transition-all duration-300">
+              <div key={idx} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-lg flex flex-col justify-between group hover:shadow-xl hover:border-primary/20 transition-all duration-300">
                 <div className="space-y-3">
                   <span className="text-[10px] font-bold tracking-widest text-slate-400 uppercase">{pub.date}</span>
                   <h4 className="font-bold text-slate-800 group-hover:text-primary transition-colors">{pub.title}</h4>
@@ -401,7 +401,7 @@ export const ParentsPage = () => {
                 </div>
                 <div className="pt-6 mt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Format: PDF</span>
-                  <button className="flex items-center gap-1.5 text-xs font-bold text-primary group-hover:text-secondary transition-colors uppercase">
+                  <button className="flex items-center gap-1.5 text-xs font-bold text-primary group-hover:text-[#0c2865] transition-colors uppercase">
                     <Download className="h-4 w-4" /> Download
                   </button>
                 </div>
@@ -465,7 +465,7 @@ export const ParentsPage = () => {
               className="space-y-8"
             >
               <div className="border-b pb-6">
-                <div className="flex items-center gap-3 mb-2 text-secondary">
+                <div className="flex items-center gap-3 mb-2 text-[#0c2865]">
                   <SectionIcon className="h-6 w-6" />
                   <span className="text-[10px] font-bold uppercase tracking-widest">Resources / {activeSection.replace(/-/g, " ")}</span>
                 </div>

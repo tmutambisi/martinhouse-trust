@@ -94,13 +94,13 @@ const WhyChooseUsSection = () => {
                   initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 10 }}
                   whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="inline-block px-5 py-2 bg-secondary/20 backdrop-blur-md text-secondary rounded-full text-[10px] font-bold tracking-widest uppercase mb-8 border border-secondary/30"
+                  className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md text-white rounded-full text-[10px] font-bold tracking-widest uppercase mb-8 border border-white/20"
                 >
                   The Martin House Advantage
                 </motion.span>
                 <h2 className="text-4xl md:text-5xl lg:text-7xl font-heading font-extrabold text-white leading-[1.05] tracking-tight">
                   Why Families <br />
-                  <span className="text-secondary italic">Choose Martin House</span>
+                  <span className="text-white/90 italic">Choose Martin House</span>
                 </h2>
               </div>
 
@@ -125,15 +125,15 @@ const WhyChooseUsSection = () => {
                   key={index}
                   variants={prefersReducedMotion ? {} : itemVariants}
                   whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
-                  className="group p-8 rounded-[2rem] bg-white/5 border border-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-secondary/30 transition-all duration-500 shadow-2xl"
+                  className="group p-8 rounded-[2rem] bg-white/5 border border-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-500 shadow-2xl"
                 >
                   <motion.div 
                     variants={prefersReducedMotion ? {} : iconVariants}
-                    className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:bg-secondary transition-all duration-500"
+                    className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:bg-white group-hover:text-[#0c2865] transition-all duration-500"
                   >
-                    <reason.icon className="h-6 w-6 text-white" />
+                    <reason.icon className="h-6 w-6 text-white group-hover:text-[#0c2865] transition-colors" />
                   </motion.div>
-                  <h3 className="text-lg font-heading font-bold text-white mb-3 tracking-tight group-hover:text-secondary transition-colors uppercase">
+                  <h3 className="text-lg font-heading font-bold text-white mb-3 tracking-tight group-hover:text-white transition-colors uppercase">
                     {reason.title}
                   </h3>
                   <p className="text-sm text-white/60 leading-relaxed font-normal p-0 group-hover:text-white transition-colors">

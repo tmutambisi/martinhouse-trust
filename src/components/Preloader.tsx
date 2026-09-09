@@ -46,7 +46,7 @@ const Preloader = () => {
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1.8, ease: "easeInOut" }}
-                className="h-full bg-secondary rounded-full"
+                className="h-full bg-[#0c2865] rounded-full"
               />
             </div>
           </motion.div>

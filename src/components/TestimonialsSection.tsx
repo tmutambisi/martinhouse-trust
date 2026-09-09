@@ -69,8 +69,8 @@ const TestimonialsSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-8 sm:items-center">
-              <div className="flex text-yellow-500">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
+              <div className="flex text-[#0c2865]">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[#0c2865] text-[#0c2865]" />)}
               </div>
               <div className="flex items-center gap-4">
                 <div className="h-4 w-px bg-slate-300 hidden sm:block" />

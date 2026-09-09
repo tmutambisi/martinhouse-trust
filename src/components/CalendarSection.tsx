@@ -193,7 +193,7 @@ Official Martin House Publication`;
     <section id="calendars-section" className="py-20 lg:py-28 bg-[#f8f9fc] relative overflow-hidden font-body">
       {/* Decorative background accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0c2865]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#e8b84b]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0c2865]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl relative z-10">
         
@@ -244,7 +244,7 @@ Official Martin House Publication`;
 
             <Button
               onClick={() => handleDownloadCalendar("Martin-House-Term-Dates-Schedule")}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-xs uppercase tracking-wider h-10 px-4 rounded-xl shadow-sm flex items-center gap-2"
+              className="bg-[#0c2865] hover:bg-[#0a2153] text-white font-heading font-bold text-xs uppercase tracking-wider h-10 px-4 rounded-xl shadow-sm flex items-center gap-2"
             >
               <ArrowDownToLine className="w-4 h-4" />
               Download Schedule
@@ -266,15 +266,9 @@ Official Martin House Publication`;
                 key={item.term}
                 className="bg-white rounded-3xl border border-slate-200/90 p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group overflow-hidden"
               >
-                {/* Top Accent Stripe */}
+                {/* Top Accent Stripe — all navy */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-1.5 ${
-                    item.status === "current"
-                      ? "bg-[#0c2865]"
-                      : item.status === "upcoming"
-                      ? "bg-[#e8b84b]"
-                      : "bg-slate-300"
-                  }`}
+                  className="absolute top-0 left-0 right-0 h-1.5 bg-[#0c2865]"
                 />
 
                 <div className="space-y-5">
@@ -283,18 +277,18 @@ Official Martin House Publication`;
                       {item.term}
                     </span>
                     {item.status === "current" && (
-                      <span className="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full uppercase tracking-wider flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      <span className="px-2.5 py-1 bg-[#0c2865] text-white text-[10px] font-bold rounded-full uppercase tracking-wider flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                         In Session
                       </span>
                     )}
                     {item.status === "upcoming" && (
-                      <span className="px-2.5 py-1 bg-amber-100 text-amber-800 text-[10px] font-bold rounded-full uppercase tracking-wider">
+                      <span className="px-2.5 py-1 border border-[#0c2865] text-[#0c2865] bg-white text-[10px] font-bold rounded-full uppercase tracking-wider">
                         Next Term
                       </span>
                     )}
                     {item.status === "planning" && (
-                      <span className="px-2.5 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded-full uppercase tracking-wider">
+                      <span className="px-2.5 py-1 border border-slate-300 text-slate-500 bg-white text-[10px] font-bold rounded-full uppercase tracking-wider">
                         Scheduled
                       </span>
                     )}
@@ -404,11 +398,11 @@ Official Martin House Publication`;
 
                     <div className="space-y-1.5 pt-2 border-t border-slate-100 text-xs text-slate-600">
                       <div className="flex items-center gap-2">
-                        <Clock className="w-3.5 h-3.5 text-secondary shrink-0" />
+                        <Clock className="w-3.5 h-3.5 text-[#0c2865] shrink-0" />
                         <span>{fix.date} · {fix.time}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-3.5 h-3.5 text-secondary shrink-0" />
+                        <MapPin className="w-3.5 h-3.5 text-[#0c2865] shrink-0" />
                         <span>{fix.location}</span>
                       </div>
                     </div>
@@ -431,20 +425,20 @@ Official Martin House Publication`;
           </motion.div>
         )}
 
-        {/* Parent Portal Footnote banner */}
-        <div className="mt-12 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#0c2865] to-[#081a40] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        {/* Parents Hub CTA banner */}
+        <div className="mt-12 p-6 md:p-8 rounded-3xl bg-[#0c2865] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-1 text-center md:text-left">
             <h4 className="text-lg md:text-xl font-heading font-black flex items-center justify-center md:justify-start gap-2">
-              <Sparkles className="w-5 h-5 text-secondary" />
+              <Sparkles className="w-5 h-5 text-white" />
               Need live fixture reminders & Cambridge assessment updates?
             </h4>
             <p className="text-white/75 text-xs md:text-sm">
-              Parents can access real-time circulars, sports schedules, and academic reports via the Parent Portal.
+              Parents can access real-time circulars, sports schedules, and academic reports via the Parents hub.
             </p>
           </div>
           <a
             href="/parents/calendars"
-            className="px-6 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-xs uppercase tracking-wider rounded-xl transition-transform hover:scale-105 shadow-md shrink-0"
+            className="px-6 py-3 bg-white hover:bg-slate-100 text-[#0c2865] font-heading font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:scale-105 shadow-md shrink-0"
           >
             Go to Parents Hub
           </a>

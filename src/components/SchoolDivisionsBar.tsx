@@ -9,7 +9,7 @@ const divisions = [
     description: "Nurturing curiosity, confidence and a lifelong love of learning through the Cambridge Primary Curriculum.",
     href: "/prep",
     color: "from-[#0c2865] to-[#0a1f4e]",
-    accentColor: "bg-[#e8b84b]",
+    accentColor: "bg-[#0c2865]",
   },
   {
     label: "College",
@@ -17,7 +17,7 @@ const divisions = [
     description: "Cambridge Checkpoint, IGCSE, AS & A Level — academic excellence delivered by expert subject specialists.",
     href: "/college",
     color: "from-[#0c2865] to-[#081a40]",
-    accentColor: "bg-[#e8b84b]",
+    accentColor: "bg-[#0c2865]",
   },
   {
     label: "Boarding",
@@ -25,7 +25,7 @@ const divisions = [
     description: "Safe, nurturing full-time and weekly boarding for Prep and College students, guided by our values of Honour, Respect and Compassion.",
     href: "/services",
     color: "from-[#0c2865] to-[#050f26]",
-    accentColor: "bg-[#e8b84b]",
+    accentColor: "bg-[#0c2865]",
   },
 ];
 
@@ -83,7 +83,7 @@ const SchoolDivisionsBar = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2 text-[#0c2865] group-hover:text-[#e8b84b] transition-colors duration-500 mt-4">
+                <div className="flex items-center gap-2 text-[#0c2865] group-hover:text-white transition-colors duration-500 mt-4">
                   <span className="text-[11px] font-black uppercase tracking-widest">Learn More</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </div>

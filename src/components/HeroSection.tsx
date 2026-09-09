@@ -221,7 +221,7 @@ const HeroSection = () => {
             )}
             {/* Accent line at top — only on dark slides */}
             {activeSlide.dark && (
-              <div className="absolute top-0 left-0 right-0 h-1 bg-secondary opacity-80" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-white/30" />
             )}
           </motion.div>
 
@@ -239,7 +239,7 @@ const HeroSection = () => {
                 {/* Category Badge */}
                 <motion.span
                   variants={prefersReducedMotion ? {} : subtextVariants}
-                  className={`inline-block px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded-full mb-4 backdrop-blur-sm ${activeSlide.dark ? "bg-secondary/80 text-white" : "bg-[#0c2865] text-white"}`}
+                  className={`inline-block px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded-full mb-4 backdrop-blur-sm ${activeSlide.dark ? "bg-white/15 text-white border border-white/20" : "bg-[#0c2865] text-white"}`}
                 >
                   {activeSlide.category}
                 </motion.span>
@@ -278,8 +278,8 @@ const HeroSection = () => {
                         asChild
                         className={`text-base md:text-lg h-12 md:h-14 px-8 md:px-10 rounded-xl cursor-pointer transition-colors duration-300 ${
                           activeSlide.dark 
-                            ? "bg-secondary text-white hover:bg-secondary/90 border-none" 
-                            : "bg-primary text-white hover:bg-primary/90"
+                            ? "bg-white text-[#0c2865] hover:bg-white/90 font-bold border-none" 
+                            : "bg-[#0c2865] text-white hover:bg-[#0c2865]/90"
                         }`}
                       >
                         <a href="#contact">Apply Now</a>
@@ -316,7 +316,7 @@ const HeroSection = () => {
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`h-1 transition-all duration-500 rounded-full ${i === currentIndex ? 'w-8 bg-secondary' : 'w-4 bg-white/30 hover:bg-white/50'
+                className={`h-1 transition-all duration-500 rounded-full ${i === currentIndex ? 'w-8 bg-white' : 'w-4 bg-white/30 hover:bg-white/50'
                   }`}
               />
             ))}

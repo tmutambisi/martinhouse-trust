@@ -151,7 +151,7 @@ export const ImageSlideshowSection = () => {
 
                 {/* Content Overlay */}
                 <div className="absolute bottom-16 left-8 right-8 md:bottom-20 md:left-14 md:right-14 text-white z-10">
-                  <span className="inline-block px-3 py-1 bg-[#e8b84b] text-primary rounded-full text-[9px] font-black tracking-widest uppercase mb-2">
+                  <span className="inline-block px-3 py-1 bg-white text-[#0c2865] rounded-full text-[9px] font-black tracking-widest uppercase mb-2">
                     {slides[currentIndex].tag}
                   </span>
                   <h3 className="text-xl md:text-3xl lg:text-4xl font-heading font-black uppercase tracking-tight max-w-2xl leading-none">

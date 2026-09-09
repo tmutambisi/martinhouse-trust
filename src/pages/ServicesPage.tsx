@@ -466,7 +466,7 @@ export const ServicesPage = () => {
                                                 <ul className="space-y-2 mt-4">
                                                     {term.sports.map((sport) => (
                                                         <li key={sport} className="flex items-center gap-3 text-sm font-bold">
-                                                            <div className="w-1.5 h-1.5 rounded-full bg-[#e8b84b] shrink-0" />
+                                                            <div className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
                                                             {sport}
                                                         </li>
                                                     ))}
@@ -486,14 +486,14 @@ export const ServicesPage = () => {
                                         </div>
                                         <div className="grid md:grid-cols-2 gap-8">
                                             <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-                                                <Trophy className="w-8 h-8 text-[#e8b84b] mb-4" />
+                                                <Trophy className="w-8 h-8 text-[#0c2865] mb-4" />
                                                 <h4 className="font-heading font-black text-primary uppercase tracking-tight text-lg mb-3">Hockey — Champions</h4>
                                                 <p className="text-sm text-slate-600 leading-relaxed">
                                                     Our girls' hockey programme has enjoyed remarkable success, with the team being crowned <strong>ISAZ Hockey Champions for three consecutive years</strong>, demonstrating sustained excellence and dominance at the highest level of school hockey in Zambia.
                                                 </p>
                                             </div>
                                             <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-                                                <Trophy className="w-8 h-8 text-[#e8b84b] mb-4" />
+                                                <Trophy className="w-8 h-8 text-[#0c2865] mb-4" />
                                                 <h4 className="font-heading font-black text-primary uppercase tracking-tight text-lg mb-3">Rugby — Leading School</h4>
                                                 <p className="text-sm text-slate-600 leading-relaxed">
                                                     Rugby continues to thrive at Martin House College, with our boys' teams achieving outstanding results in both the <strong>Under-16 and Under-19</strong> age groups. The school has developed a strong rugby tradition and is recognised as one of the leading rugby schools in the country.
@@ -518,7 +518,7 @@ export const ServicesPage = () => {
                                                     { label: "Schools Participating", value: "Multi", sub: "From across Zambia" },
                                                 ].map((stat, i) => (
                                                     <div key={i} className="bg-white/10 rounded-2xl p-6 border border-white/10">
-                                                        <p className="text-3xl font-heading font-black text-[#e8b84b]">{stat.value}</p>
+                                                        <p className="text-3xl font-heading font-black text-white">{stat.value}</p>
                                                         <p className="text-white font-bold text-sm mt-1">{stat.label}</p>
                                                         <p className="text-white/50 text-[10px] mt-0.5">{stat.sub}</p>
                                                     </div>
